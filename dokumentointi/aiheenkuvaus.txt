@@ -1,0 +1,15 @@
+Aihe: verkostoja kartoittava henkilöstökysely
+
+Toteutetaan järjestelmän, jonka avulla jokin organisaatio voi kerätä mielipidetietoja
+jäseniltään ja kartoittaa olemassa olevia sosiaalisia verkostoja. Sen avulla henkilöstö
+vastaa sille asetettuihin avoimiin ja numeerisiin kysymyksiin joiden avulla pystytään
+kartoittamaan muutostarpeita ja avainyksilöitä.
+
+Sosiaalisten verkostojen mallinnus toteutetaan sosiogrammien avulla siten, että henkilöstö
+kertoo esim. työnsä kannalta kolme tärkeintä tiedonlähdettä. Kaikista vastanneista
+muodostetaan sitten kartta jossa kaikki pisteet kuvastavat henkilöitä, ja viivat heidän
+välisiä yhteyksiä. Tämän avulla saadaan selville organisaatioissa keskeisiä tiedonjakajia
+tai ryhmien välisiä "broker" tyyppejä. 
+
+Jos jää aikaa voidaan järjestelmään myös lisätä hierarkinen kartoitus tai jonkin sortin
+tilastollista käsittelyä vastauksille.
