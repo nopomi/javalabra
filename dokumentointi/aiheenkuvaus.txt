@@ -13,3 +13,24 @@ tai ryhmien välisiä "broker" tyyppejä.
 
 Jos jää aikaa voidaan järjestelmään myös lisätä hierarkinen kartoitus tai jonkin sortin
 tilastollista käsittelyä vastauksille.
+
+
+
+Käyttäjät: Vastaaja ja käsittelijä
+
+
+
+Vastaajan toiminnot: 
+
+-omien tietojen syöttäminen
+-kyselyyn vastaaminen:
+	-Numeerisiin kysymyksiin vastaaminne
+	-Avoimiin kysymyksiin vastaaminen
+-vastausten lähettäminen
+
+
+Käsittelijän toiminnot: 
+
+-Sosiogrammin muodostaminen (ja tulostus?)
+-Numeeristen vastaajaraporttien muodostus
+-Kirjallisten vastaajaraporttien muodostus
