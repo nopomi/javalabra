@@ -1,4 +1,6 @@
 Tuntikirjanpito:
 
-15.1. 18:00-19:00 Aiheen ideointi
-16.1. 15:40-20:00 Aiheen ideointi, ensimmäisen viikon tehtävät (projektin tekeminen, github-säädöt, aihekuvaus jne)
+15.1. 18:00-19:00 (1h) Aiheen ideointi
+16.1. 15:40-20:00 (4h20min) Aiheen ideointi, ensimmäisen viikon tehtävät (projektin tekeminen, github-säädöt, aihekuvaus jne)
+22.1. 10:00-14:30 (2h30min) Ohjelmointi, kolmannen osapuolen kirjastojen käyttöönotto (onnistumatta)
+22.1. 19:00-21:00 (2h) Ohjelmointi, erityisesti tallennusrakenteen toteutus
