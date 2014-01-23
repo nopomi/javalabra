@@ -21,4 +21,5 @@ public class Vastaaja {
         return this.nimi;
     }
     
+    
 }
