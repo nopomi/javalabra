@@ -60,6 +60,16 @@
                 <groupId>org.pitest</groupId>
                 <artifactId>pitest-maven</artifactId>
                 <version>0.30</version>
+                <configuration>
+                    <targetClasses>
+                        <param>javalabra.henkilostokysely.domain*</param>
+                        <param>javalabra.henkilostokysely.tallennus*</param>
+                    </targetClasses>
+                    <targetTests>
+                        <param>ristinolla.logiikka*</param>
+                        <param>ristinolla.tekoaly*</param>
+                    </targetTests>
+                </configuration>
             </plugin>
         </plugins>
     </build>
