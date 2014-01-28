@@ -54,6 +54,14 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>cobertura-maven-plugin</artifactId>
+                <configuration>
+                    <instrumentation>
+                        <includes>
+                            <include>javalabra.henkilostokysely.domain/*.class</include>
+                            <include>javalabra.henkilostokysely.tallennus/*.class</include>
+                        </includes>
+                    </instrumentation>
+                </configuration>
                 <version>2.6</version>
             </plugin>
             <plugin>
@@ -66,8 +74,8 @@
                         <param>javalabra.henkilostokysely.tallennus*</param>
                     </targetClasses>
                     <targetTests>
-                        <param>ristinolla.logiikka*</param>
-                        <param>ristinolla.tekoaly*</param>
+                        <param>javalabra.henkilostokysely.domain*</param>
+                        <param>javalabra.henkilostokysrely.tallennus*</param>
                     </targetTests>
                 </configuration>
             </plugin>

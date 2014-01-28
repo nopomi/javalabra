@@ -2,7 +2,7 @@ package javalabra.henkilostokysely.tallennus;
 
 import java.io.FileWriter;
 
-public class vastaustenTallentaja {
+public class VastaustenTallentaja {
     
     //talletusrakenne vielä pahasti kesken, jäi vaan aikaa yli niin
     //rupesin koodaamaan tätä. Toimii alustavasti ja luo csv-tiedoston.
@@ -10,7 +10,7 @@ public class vastaustenTallentaja {
     private FileWriter kirjoittaja;
     private int indeksi;
     
-    public vastaustenTallentaja(){
+    public VastaustenTallentaja(){
         this.indeksi=0;
     }
     

@@ -2,20 +2,20 @@
 package javalabra.henkilostokysely.domain;
 
 import java.util.Objects;
-import javalabra.henkilostokysely.tallennus.vastaustenTallentaja;
+import javalabra.henkilostokysely.tallennus.VastaustenTallentaja;
 
 
 public class Kysymys {
     
     private String kysymys;
     private Vastaustyyppi tyyppi;
-    private vastaustenTallentaja tallentaja;
+    private VastaustenTallentaja tallentaja;
     private int indeksi;
     
     public Kysymys(String kysymys, Vastaustyyppi tyyppi){
         this.kysymys = kysymys;
         this.tyyppi=tyyppi;
-        this.tallentaja= new vastaustenTallentaja();
+        this.tallentaja= new VastaustenTallentaja();
     }
     
     public String getKysymys(){
@@ -60,7 +60,7 @@ public class Kysymys {
         return this.indeksi;
     }
     
-    public vastaustenTallentaja getTallentaja(){
+    public VastaustenTallentaja getTallentaja(){
         return this.tallentaja;
     }
 
