@@ -35,4 +35,12 @@ public class KysymysTest {
         kyssari.setIndeksi(122);
         assertEquals(122, kyssari.getIndeksi());
     }
+    
+    @Test
+    public void kysymyksenHashCodeToimii(){
+        Kysymys kyssari = new Kysymys("Oletko?", Vastaustyyppi.MONIVALINTA, 1);
+        Kysymys vertailuKyssari = new Kysymys("Oletko?", Vastaustyyppi.MONIVALINTA, 3);
+        
+        assertEquals(kyssari.hashCode(),vertailuKyssari.hashCode());
+    }
 }

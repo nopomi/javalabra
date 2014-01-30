@@ -11,6 +11,7 @@ public class Linkki {
     public Linkki(double paino, double kapasiteetti){
         this.paino=paino;
         this.kapasiteetti=kapasiteetti;
+        this.id = 0;
     }
     
     

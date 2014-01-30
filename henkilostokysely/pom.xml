@@ -75,6 +75,7 @@
                         <includes>
                             <include>henkilostokysely.domain/*.class</include>
                             <include>henkilostokysely.tallennus/*.class</include>
+                            <include>henkilostokysely.sna/*.class</include>
                         </includes>
                     </instrumentation>
                 </configuration>
@@ -87,11 +88,13 @@
                 <configuration>
                     <targetClasses>
                         <param>henkilostokysely.domain*</param>
-                        <param>javalabra.henkilostokysely.tallennus*</param>
+                        <param>henkilostokysely.tallennus*</param>
+                        <param>henkilostokysely.sna*</param>
                     </targetClasses>
                     <targetTests>
                         <param>henkilostokysely.domain*</param>
-                        <param>henkilostokysrely.tallennus*</param>
+                        <param>henkilostokysely.tallennus*</param>
+                        <param>henkilostokysely.sna*</param>
                     </targetTests>
                 </configuration>
             </plugin>
