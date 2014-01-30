@@ -1,10 +1,10 @@
-package javalabra.henkilostokysely;
+package henkilostokysely;
 
-import javalabra.henkilostokysely.domain.Kysely;
-import javalabra.henkilostokysely.domain.Kysymys;
-import javalabra.henkilostokysely.domain.Vastaaja;
-import javalabra.henkilostokysely.domain.Vastaustyyppi;
-import javalabra.henkilostokysely.tallennus.VastaustenTallentaja;
+import henkilostokysely.domain.Kysely;
+import henkilostokysely.domain.Kysymys;
+import henkilostokysely.domain.Vastaaja;
+import henkilostokysely.domain.Vastaustyyppi;
+import henkilostokysely.tallennus.VastaustenTallentaja;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -14,7 +14,6 @@ import static org.junit.Assert.*;
 
 public class HenkilostokyselyTest {
     
-    Kysely kysely;
 
     public HenkilostokyselyTest() {
     }

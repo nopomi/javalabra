@@ -34,9 +34,21 @@
             <type>jar</type>
         </dependency>
         <dependency>
+            <groupId>net.sf.jung</groupId>
+            <artifactId>jung-visualization</artifactId>
+            <version>2.0.1</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
             <groupId>colt</groupId>
             <artifactId>colt</artifactId>
             <version>1.2.0</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>net.sf.jung</groupId>
+            <artifactId>jung-algorithms</artifactId>
+            <version>2.0.1</version>
             <type>jar</type>
         </dependency>
     </dependencies>
@@ -55,10 +67,14 @@
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>cobertura-maven-plugin</artifactId>
                 <configuration>
+                    <formats>
+                        <format>html</format>
+                        <format>xml</format>
+                    </formats>
                     <instrumentation>
                         <includes>
-                            <include>javalabra.henkilostokysely.domain/*.class</include>
-                            <include>javalabra.henkilostokysely.tallennus/*.class</include>
+                            <include>henkilostokysely.domain/*.class</include>
+                            <include>henkilostokysely.tallennus/*.class</include>
                         </includes>
                     </instrumentation>
                 </configuration>
@@ -70,12 +86,12 @@
                 <version>0.30</version>
                 <configuration>
                     <targetClasses>
-                        <param>javalabra.henkilostokysely.domain*</param>
+                        <param>henkilostokysely.domain*</param>
                         <param>javalabra.henkilostokysely.tallennus*</param>
                     </targetClasses>
                     <targetTests>
-                        <param>javalabra.henkilostokysely.domain*</param>
-                        <param>javalabra.henkilostokysrely.tallennus*</param>
+                        <param>henkilostokysely.domain*</param>
+                        <param>henkilostokysrely.tallennus*</param>
                     </targetTests>
                 </configuration>
             </plugin>

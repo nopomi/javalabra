@@ -1,6 +1,6 @@
 
 
-package javalabra.henkilostokysely.domain;
+package henkilostokysely.domain;
 
 
 public class Vastaaja {

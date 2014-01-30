@@ -1,11 +1,12 @@
 
-package javalabra.henkilostokysely.domain;
+package henkilostokysely.domain;
 
 
 public enum Vastaustyyppi{
     
 
-    AVOIN,LIKERT,MONIVALINTA,ASTEIKKO;
+    AVOIN,LIKERT,MONIVALINTA,ASTEIKKO,KOLMIKENTTA;
+    
     
     //kysymysten eri tyyppejä, muut asiat ovat käyttöliittymään liittyviä joten
     //ne käsitellään siellä. Likert on "samaa mieltä, osittain samaaa mieltä..."

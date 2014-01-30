@@ -1,6 +1,7 @@
 
-package javalabra.henkilostokysely.domain;
+package henkilostokysely.domain;
 
+import henkilostokysely.domain.Vastaaja;
 import org.junit.Test;
 import org.junit.After;
 import org.junit.AfterClass;

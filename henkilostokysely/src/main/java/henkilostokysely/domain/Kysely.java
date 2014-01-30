@@ -1,4 +1,4 @@
-package javalabra.henkilostokysely.domain;
+package henkilostokysely.domain;
 
 import com.sun.corba.se.impl.orbutil.graph.Graph;
 import java.util.ArrayList;
@@ -9,8 +9,7 @@ import java.util.Map;
 public class Kysely {
 
     private HashMap<Integer, Kysymys> kysymykset;
-    //private List<Integer> vastanneet;
-    //tähän tulee myöhemmin toiminto joka varmistaa että 1 vastaus / tyyppi / kysely
+    private List<Integer> vastanneet;
     private String nimi;
 
     public Kysely(String nimi) {
@@ -24,13 +23,12 @@ public class Kysely {
         if (this.kysymykset.containsValue(lisattava)) {
             return false;
         }
-        this.kysymykset.put(kysymykset.size() + 1, lisattava);
-        lisattava.setIndeksi(kysymykset.size());
+        this.kysymykset.put(kysymykset.size()+1, lisattava);
         return true;
     }
     
     public Kysymys luoKysymys(String kysymysteksti, Vastaustyyppi tyyppi){
-        Kysymys kysymys = new Kysymys(kysymysteksti, tyyppi);
+        Kysymys kysymys = new Kysymys(kysymysteksti, tyyppi, kysymykset.size()+1);
         return kysymys;
         
     }
@@ -41,6 +39,14 @@ public class Kysely {
     
     public String getNimi(){
         return this.nimi;
+    }
+    
+    public boolean lisaaVastaaja(int henkiloNumero){
+        if(this.vastanneet.contains(henkiloNumero)){
+            return false;
+        }
+        vastanneet.add(henkiloNumero);
+        return true;
     }
     
 }

@@ -1,5 +1,6 @@
-package javalabra.henkilostokysely.tallennus;
+package henkilostokysely.tallennus;
 
+import henkilostokysely.tallennus.VastaustenTallentaja;
 import org.junit.Test;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -12,7 +13,7 @@ public class VastaustenTallentajaTest {
 
     @Test
     public void VastaustenTallentajanKonstruktoriToimii() {
-        VastaustenTallentaja tallentaja = new VastaustenTallentaja();
+        VastaustenTallentaja tallentaja = new VastaustenTallentaja(1);
         assertEquals(0, tallentaja.getIndeksi());
         tallentaja.setIndeksi(5);
         assertEquals(5, tallentaja.getIndeksi());
@@ -21,7 +22,7 @@ public class VastaustenTallentajaTest {
 
     @Test
     public void vastaustenTalletusEiKuse() {
-        VastaustenTallentaja tallentaja = new VastaustenTallentaja();
+        VastaustenTallentaja tallentaja = new VastaustenTallentaja(1);
         tallentaja.talletaVastaus(123, "hehehe");
         tallentaja.talletaVastaus(666, "Hello csv!");
 
@@ -32,7 +33,7 @@ public class VastaustenTallentajaTest {
 
     @Test
     public void vastaustenTalletusEiKuseIndeksinMuutoksellakaan() {
-        VastaustenTallentaja tallentaja = new VastaustenTallentaja();
+        VastaustenTallentaja tallentaja = new VastaustenTallentaja(1);
         tallentaja.setIndeksi(12312312);
         tallentaja.talletaVastaus(10007, "(//__ö) = emokid");
     }

@@ -1,8 +1,8 @@
 
-package javalabra.henkilostokysely.domain;
+package henkilostokysely.domain;
 
 import java.util.Objects;
-import javalabra.henkilostokysely.tallennus.VastaustenTallentaja;
+import henkilostokysely.tallennus.VastaustenTallentaja;
 
 
 public class Kysymys {
@@ -12,10 +12,11 @@ public class Kysymys {
     private VastaustenTallentaja tallentaja;
     private int indeksi;
     
-    public Kysymys(String kysymys, Vastaustyyppi tyyppi){
+    public Kysymys(String kysymys, Vastaustyyppi tyyppi, int indeksi){
         this.kysymys = kysymys;
         this.tyyppi=tyyppi;
-        this.tallentaja= new VastaustenTallentaja();
+        this.tallentaja= new VastaustenTallentaja(indeksi);
+        this.indeksi=indeksi;
     }
     
     public String getKysymys(){
@@ -30,7 +31,6 @@ public class Kysymys {
     public boolean equals(Object olio){
         if(olio==null){
             return false;
-            
         }
         
         if(this.getClass()!=olio.getClass()){
