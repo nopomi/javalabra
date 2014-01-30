@@ -5,4 +5,8 @@ Tuntikirjanpito:
 22.1. 10:00-14:30 (2h30min) Ohjelmointi, kolmannen osapuolen kirjastojen käyttöönotto (onnistumatta)
 22.1. 19:00-22:00 (3h) Ohjelmointi, erityisesti tallennusrakenteen toteutus
 23.1. 18:00-23:00 (5h) Ohjelmointi, sovelluslogiikan säätö ja pitin kanssa painiminen
+28.1. 19:00-22:00 (3h) Ohjelmointi, vastausten tallentaja
+29.1. 10:00-13:30 (3h30min) Ohjelmointi, koko sna oikeastaan tehty
+30.1. 20:00-23:00 (3h) Ohjelmointi, testit ja sna:n kehittäminen. Vastaustenpurkaja
+
 
