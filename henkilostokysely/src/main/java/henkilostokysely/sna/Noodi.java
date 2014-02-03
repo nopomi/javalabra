@@ -2,10 +2,20 @@
 package henkilostokysely.sna;
 
 
+/**
+ *
+ * @author Miska
+ * Noodi symboloi kaaviossa yhtä ihmistä, ja sen ID on sama kuin ihmisen
+ * henkilöstönumero.
+ */
 public class Noodi {
     
     private int id;
     
+    /**
+     * Metodi luo uuden Noodin annetulla id:llä.
+     * @param id
+     */
     public Noodi(int id){
         this.id=id;
     }
@@ -15,6 +25,11 @@ public class Noodi {
         return "Noodi"+id;
     }
     
+    /**
+     * Palauttaa noodin henkilöstönumeron eli id:n, tulee olemaan keskeinen
+     * asia käyttöliittymässä.
+     * @return
+     */
     public int getId(){
         return this.id;
     }

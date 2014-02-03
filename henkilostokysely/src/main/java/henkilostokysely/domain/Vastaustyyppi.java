@@ -2,14 +2,40 @@
 package henkilostokysely.domain;
 
 
+
 public enum Vastaustyyppi{
     
 
-    AVOIN,LIKERT,MONIVALINTA,ASTEIKKO,KOLMIKENTTA;
+    /**
+     * Luokka on kokoelma eri vastaustyyppejä, jotka vaikuttavat 
+     * siihen minkälainen vastaustyyppi käyttöliittymässä näkyy.
+     * 
+     * Avoin vastaus on avoin tekstikenttä johon voi kirjottaa
+     */
+    AVOIN,
+    /**
+     *
+     * Vastaustyyppi Likert on samaa mieltä, osittain samaa mieltä,
+     * ei samaa eikä eri mieltä, osittain eri mieltä, eri mieltä
+     */
+    LIKERT,
+    /**
+     *
+     * Monivalinnassa vastausvaihtoehdot voivat olla
+     * mitä tahansa kirjallisia vaihtoehtoja.
+     */
+    MONIVALINTA,
+    /**
+     * Numeerinen asteikko, esim 1,2,3,4,5
+     */
+    ASTEIKKO,
+    /**
+     * Vastaaja nimeää kolme henkilöä vastauksena kysymykseen, voi olla esim
+     * "Keneltä kolmelta pyydät todennäköisimmin apua kun kohtaat ongelmia
+     * työssäsi?"
+     */
+    KOLMIKENTTA;
     
     
-    //kysymysten eri tyyppejä, muut asiat ovat käyttöliittymään liittyviä joten
-    //ne käsitellään siellä. Likert on "samaa mieltä, osittain samaaa mieltä..."
-    //-tyylinen vastaustyyppi.
     
 }

@@ -18,12 +18,22 @@ import java.awt.Dimension;
 import javax.swing.JFrame;
 import edu.uci.ics.jung.visualization.VisualizationImageServer;
 import edu.uci.ics.jung.graph.DirectedSparseGraph;
+import henkilostokysely.gui.Kayttoliittyma;
 import henkilostokysely.sna.Kaavio;
 import henkilostokysely.sna.Linkki;
 import henkilostokysely.sna.Noodi;
+import javax.swing.SwingUtilities;
 
+/**
+ *
+ * @author Miska
+ */
 public class App {
 
+    /**
+     *
+     * @param args
+     */
     public static void main(String[] args) {
 
 //        DirectedSparseGraph g = new DirectedSparseGraph();
@@ -54,8 +64,12 @@ public class App {
 //        frame.pack();
 //        frame.setVisible(true);
         
-        Kaavio kaavio = new Kaavio();
-        System.out.println(kaavio.toString());
+//        Kaavio kaavio = new Kaavio();
+//        System.out.println(kaavio.toString());
+        
+        
+        Kayttoliittyma kayttoliittyma = new Kayttoliittyma();
+        SwingUtilities.invokeLater(kayttoliittyma);
 
 
 

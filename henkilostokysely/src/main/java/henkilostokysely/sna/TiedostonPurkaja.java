@@ -5,10 +5,18 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 
 
+/**
+ * Luokka lukee csv-tiedostoja ja purkaa ne kaavioiksi.
+ * @author Miska
+ */
 public class TiedostonPurkaja {
     
     
-    public static void puraVastauksetKaavioksi(String tiedostoNimi){
+    /**
+     *
+     * @param tiedostoNimi
+     */
+    public static Kaavio puraVastauksetKaavioksi(String tiedostoNimi){
         
         Kaavio kaavio = new Kaavio();
         BufferedReader br = null;
@@ -42,6 +50,8 @@ public class TiedostonPurkaja {
                 }
             }
         }
+        
+        return kaavio;
         
     }
     

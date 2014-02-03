@@ -3,13 +3,45 @@ package henkilostokysely.gui;
 
 import edu.uci.ics.jung.algorithms.layout.CircleLayout;
 import edu.uci.ics.jung.visualization.VisualizationImageServer;
+import java.awt.Container;
 import java.awt.Dimension;
-import javax.swing.JFrame;
+import javax.swing.*;
 
 
-public class Kayttoliittyma {
+/**
+ *
+ * @author Miska
+ */
+public class Kayttoliittyma implements Runnable{
     
-    //tähän tulee mielettömän hemaiseva käyttöliittymä (myöhemmin)
-    // Odottavat käyttöliittymän kehittämistä
+    private JFrame frame;
+    
+    public Kayttoliittyma() {
+    }
+
+    @Override
+    public void run() {
+        frame = new JFrame("KIFinder");
+        frame.setPreferredSize(new Dimension(500, 500));
+        
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        
+        luoKomponentit(frame.getContentPane());
+        
+        frame.pack();
+        frame.setVisible(true);
+    }
+    
+
+    private void luoKomponentit(Container container) {
+    
+    }
+    
+    public JFrame getFrame(){
+        return frame;
+    }
+    
+    
+    
     
 }
