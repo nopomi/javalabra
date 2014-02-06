@@ -18,9 +18,9 @@ public class KysymysTest {
 
     @Test
     public void kysymyksenKonstruktoriToimii() {
-        Kysymys kyssari = new Kysymys("Miksi?", Vastaustyyppi.MONIVALINTA, 0);
+        Kysymys kyssari = new Kysymys("Miksi?", Vastaustyyppi.ASTEIKKO, 0);
         assertEquals("Miksi?", kyssari.getKysymys());
-        assertEquals(Vastaustyyppi.MONIVALINTA, kyssari.getTyyppi());
+        assertEquals(Vastaustyyppi.ASTEIKKO, kyssari.getTyyppi());
         assertTrue(kyssari.getTallentaja() != null);
     }
 
@@ -38,8 +38,8 @@ public class KysymysTest {
     
     @Test
     public void kysymyksenHashCodeToimii(){
-        Kysymys kyssari = new Kysymys("Oletko?", Vastaustyyppi.MONIVALINTA, 1);
-        Kysymys vertailuKyssari = new Kysymys("Oletko?", Vastaustyyppi.MONIVALINTA, 3);
+        Kysymys kyssari = new Kysymys("Oletko?", Vastaustyyppi.ASTEIKKO, 1);
+        Kysymys vertailuKyssari = new Kysymys("Oletko?", Vastaustyyppi.ASTEIKKO, 3);
         
         assertEquals(kyssari.hashCode(),vertailuKyssari.hashCode());
     }

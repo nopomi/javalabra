@@ -12,39 +12,36 @@ import javax.swing.*;
  *
  * @author mnoponen@cs
  */
-public class AloitusValikko extends JPanel {
+public class Aloitusvalikko extends JPanel {
 
-    private JLabel label;
-    private JButton vastauspainike;
-    private JButton analysointipainike;
-    private JButton luontipainike;
     private Kayttoliittyma kayttoliittyma;
 
-    public AloitusValikko(Kayttoliittyma kayttis) {
-        super(new GridLayout(2, 3));
+    public Aloitusvalikko(Kayttoliittyma kayttis) {
+        super(new GridLayout(3, 3));
         luoKomponentit();
         this.kayttoliittyma=kayttis;
     }
 
     private void luoKomponentit() {
 
-        label = new JLabel("Valitse toiminto:");
-        vastauspainike = new JButton("Vastaa");
-        analysointipainike = new JButton("Analysoi");
-        luontipainike = new JButton("Luo");
+        JLabel label = new JLabel("Valitse toiminto:");
+        JButton vastauspainike = new JButton("Vastaa");
+        JButton analysointipainike = new JButton("Analysoi");
+        JButton luontipainike = new JButton("Luo");
         AloitusvalikkoKuuntelija kuuntelija = new AloitusvalikkoKuuntelija(
                 this, vastauspainike, analysointipainike, luontipainike);
 
         vastauspainike.addActionListener(kuuntelija);
         analysointipainike.addActionListener(kuuntelija);
         luontipainike.addActionListener(kuuntelija);
-
-        add(Box.createRigidArea(new Dimension(50, 0)));
+        
+        add(Box.createRigidArea(new Dimension(0, 100)));
         add(label);
-        add(Box.createRigidArea(new Dimension(50, 0)));
+        add(Box.createRigidArea(new Dimension(0, 100)));
         add(vastauspainike);
         add(analysointipainike);
         add(luontipainike);
+        add(Box.createRigidArea(new Dimension(0,100)));
     }
     
     public void vaihdaValikko(Valikko vaihdettava){

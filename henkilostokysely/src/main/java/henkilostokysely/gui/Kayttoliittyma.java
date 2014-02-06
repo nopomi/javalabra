@@ -2,6 +2,8 @@ package henkilostokysely.gui;
 
 import edu.uci.ics.jung.algorithms.layout.CircleLayout;
 import edu.uci.ics.jung.visualization.VisualizationImageServer;
+import henkilostokysely.gui.analysointi.*;
+import henkilostokysely.gui.luonti.NimiValikko;
 import java.awt.Container;
 import java.awt.Dimension;
 import java.util.HashMap;
@@ -14,7 +16,7 @@ import javax.swing.*;
 public class Kayttoliittyma implements Runnable {
 
     private JFrame frame;
-    private HashMap<String, JPanel> valikot;
+    private HashMap<Valikko, JPanel> valikot;
     private JPanel aktiivinen;
 
     public Kayttoliittyma() {
@@ -26,32 +28,42 @@ public class Kayttoliittyma implements Runnable {
 
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
-        luoAloitusvalikko(frame.getContentPane());
+        luoValikot(frame.getContentPane());
 
         frame.pack();
         frame.setVisible(true);
     }
-
-    public void luoAloitusvalikko(Container container) {
+    
+    public void luoValikot(Container container){
         BoxLayout layout = new BoxLayout(container, BoxLayout.Y_AXIS);
         container.setLayout(layout);
-        container.add(Box.createRigidArea(new Dimension(0, 100)));
-        container.add(new AloitusValikko(this));
-        container.add(Box.createRigidArea(new Dimension(0, 100)));
+        Aloitusvalikko aloitusvalikko = new Aloitusvalikko(this);
+        NimiValikko luonti1 = new NimiValikko(this);
+        
+        //tähän tulee kaikkien valikkojen luominen
+        
+        valikot.put(Valikko.ALOITUS, aloitusvalikko);
+        valikot.put(Valikko.LUONTINIMI, luonti1);
+        
+        
+        
+        aloitusvalikko.setVisible(false);
+        
+        //tähän tulee kaikkien valikkojen lisäys valikot-mappiin
+        
+        
+        container.add(aloitusvalikko);
+        container.add(luonti1);
+        //tähän tulee kaikkien valikkojen lisääminen käyttöliittymään
+        
+    }
 
-    }
-    
-    
-    public void luoVastausvalikko(Container container){
-    }
-    
-    public void luoAnalysointivalikko(Container container){
+    public void luoAloitusvalikko(Container container) {
+        
+        container.add(new Aloitusvalikko(this));
         
     }
     
-    public void luoLuontivalikko(Container container){
-        
-    }
 
 
     

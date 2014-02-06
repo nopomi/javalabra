@@ -47,7 +47,7 @@ public class KyselyTest {
     @Test
     public void lisaaKaksiKysymystaOikeinAvoin() {
         kysely.lisaaKysymys("trololo", Vastaustyyppi.LIKERT);
-        kysely.lisaaKysymys("Kerro vähän", Vastaustyyppi.MONIVALINTA);
+        kysely.lisaaKysymys("Kerro vähän", Vastaustyyppi.ASTEIKKO);
         assertEquals(2, kysely.getKysymykset().size());
     }
 
