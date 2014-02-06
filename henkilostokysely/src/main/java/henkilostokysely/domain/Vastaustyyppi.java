@@ -20,12 +20,6 @@ public enum Vastaustyyppi{
      */
     LIKERT,
     /**
-     *
-     * Monivalinnassa vastausvaihtoehdot voivat olla
-     * mitä tahansa kirjallisia vaihtoehtoja.
-     */
-    MONIVALINTA,
-    /**
      * Numeerinen asteikko, esim 1,2,3,4,5
      */
     ASTEIKKO,

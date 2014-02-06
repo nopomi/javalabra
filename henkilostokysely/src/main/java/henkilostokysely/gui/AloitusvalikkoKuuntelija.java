@@ -31,7 +31,7 @@ public class AloitusvalikkoKuuntelija implements ActionListener{
         
         
         if(e.getSource()==vastaa){
-            
+            valikko.vaihdaValikko(Valikko.VASTAAJAKYSELY);
         } else if(e.getSource()==analysoi){
 
         } else if(e.getSource()==luo){

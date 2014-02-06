@@ -59,7 +59,7 @@ public class Kayttoliittyma implements Runnable {
         this.aktiivinen=valikko;
     }
     
-    void vaihdaValikko(String vaihdettava) {
+    void vaihdaValikko(Valikko vaihdettava) {
         this.aktiivinen.setVisible(false);
         
         

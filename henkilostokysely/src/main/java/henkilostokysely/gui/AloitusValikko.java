@@ -47,7 +47,7 @@ public class AloitusValikko extends JPanel {
         add(luontipainike);
     }
     
-    public void vaihdaValikko(String vaihdettava){
+    public void vaihdaValikko(Valikko vaihdettava){
         this.kayttoliittyma.vaihdaValikko(vaihdettava);
     }
 
