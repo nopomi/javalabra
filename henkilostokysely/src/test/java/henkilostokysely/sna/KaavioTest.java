@@ -67,6 +67,22 @@ public class KaavioTest {
 
     }
     
+    @Test
+    public void lisaaNoodiPalautusarvoToimii(){
+        Noodi noodi = new Noodi(2);
+        Noodi noodi2 = new Noodi(3);
+        Noodi noodi3 = new Noodi(3);
+        
+        Noodi paluunoodi = kaavio.lisaaNoodi(noodi);
+        Noodi paluunoodi2 = kaavio.lisaaNoodi(noodi2);
+        Noodi paluunoodi3 = kaavio.lisaaNoodi(noodi3);
+        
+        assertTrue(paluunoodi2==paluunoodi3);
+        assertTrue(paluunoodi==noodi);
+        
+        
+    }
+    
     @Test 
     public void lisaaLinkkiToimii(){
         Noodi noodi = new Noodi(1);
