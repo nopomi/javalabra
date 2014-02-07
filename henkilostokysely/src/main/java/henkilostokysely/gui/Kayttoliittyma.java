@@ -4,8 +4,10 @@ import edu.uci.ics.jung.algorithms.layout.CircleLayout;
 import edu.uci.ics.jung.visualization.VisualizationImageServer;
 import henkilostokysely.gui.analysointi.*;
 import henkilostokysely.gui.luonti.NimiValikko;
+import henkilostokysely.gui.Valikko;
 import java.awt.Container;
 import java.awt.Dimension;
+import java.util.EnumMap;
 import java.util.HashMap;
 import javax.swing.*;
 
@@ -20,6 +22,7 @@ public class Kayttoliittyma implements Runnable {
     private JPanel aktiivinen;
 
     public Kayttoliittyma() {
+        this.valikot = new HashMap<>();
     }
 
     @Override
@@ -33,54 +36,45 @@ public class Kayttoliittyma implements Runnable {
         frame.pack();
         frame.setVisible(true);
     }
-    
-    public void luoValikot(Container container){
+
+    public void luoValikot(Container container) {
         BoxLayout layout = new BoxLayout(container, BoxLayout.Y_AXIS);
         container.setLayout(layout);
+        container.setPreferredSize(new Dimension(700, 700));
         Aloitusvalikko aloitusvalikko = new Aloitusvalikko(this);
-        NimiValikko luonti1 = new NimiValikko(this);
-        
+        NimiValikko luontinimi = new NimiValikko(this);
         //tähän tulee kaikkien valikkojen luominen
-        
+
         valikot.put(Valikko.ALOITUS, aloitusvalikko);
-        valikot.put(Valikko.LUONTINIMI, luonti1);
+        valikot.put(Valikko.LUONTINIMI, luontinimi);
+
+
+        aloitusvalikko.setVisible(true);
+        luontinimi.setVisible(false);
         
         
-        
-        aloitusvalikko.setVisible(false);
-        
-        //tähän tulee kaikkien valikkojen lisäys valikot-mappiin
-        
-        
+        setAktiivinen(aloitusvalikko);
+
+
         container.add(aloitusvalikko);
-        container.add(luonti1);
+        container.add(luontinimi);
         //tähän tulee kaikkien valikkojen lisääminen käyttöliittymään
-        
+
     }
 
-    public void luoAloitusvalikko(Container container) {
-        
-        container.add(new Aloitusvalikko(this));
-        
+    public void setAktiivinen(JPanel valikko) {
+        this.aktiivinen = valikko;
     }
-    
 
-
-    
-    public void setAktiivinen(JPanel valikko){
-        this.aktiivinen=valikko;
-    }
-    
-    void vaihdaValikko(Valikko vaihdettava) {
+    public void vaihdaValikko(Valikko vaihdettava) {
         this.aktiivinen.setVisible(false);
-        
-        
+        JPanel vaihdettavaPanel = valikot.get(vaihdettava);
+        vaihdettavaPanel.setVisible(true);
+        setAktiivinen(vaihdettavaPanel);
+
     }
-    
+
     public JFrame getFrame() {
         return frame;
     }
-
-
-
 }

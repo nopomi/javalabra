@@ -8,6 +8,6 @@ package henkilostokysely.gui.vastaaminen;
  *
  * @author Miska
  */
-public class LopetusValikko {
+public class KiitosValikko {
     
 }

@@ -1,6 +1,7 @@
 package henkilostokysely.gui.luonti;
 
 import henkilostokysely.gui.Kayttoliittyma;
+import henkilostokysely.gui.Valikko;
 import java.awt.*;
 import javax.swing.*;
 
@@ -22,9 +23,20 @@ public class NimiValikko extends JPanel {
     private void luoKomponentit() {
         JLabel annaNimi = new JLabel("Kyselyn nimi:");
         JTextField tekstiKentta = new JTextField();
+        JButton tallennuspainike = new JButton();
+        
+        NimiValikkoKuuntelija kuuntelija = new NimiValikkoKuuntelija(
+                this, tekstiKentta, tallennuspainike);
+        
+        tekstiKentta.addActionListener(kuuntelija);
+        tallennuspainike.addActionListener(kuuntelija);
         
         add(annaNimi);
         add(tekstiKentta);
         
+    }
+    
+    public void vaihdaValikko(Valikko vaihdettava){
+        kayttis.vaihdaValikko(vaihdettava);
     }
 }

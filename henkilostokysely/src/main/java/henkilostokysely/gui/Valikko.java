@@ -15,7 +15,7 @@ public enum Valikko {
     VASTAAJATIETO,
     VASTAAJAVALINTA,
     VASTAAJAKYSELY,
-    VASTAAJALOPETUS,
+    VASTAAJAKIITOS,
     
     ANALYSOINTITIETO,
     ANALYSOINTIKYSELY,
@@ -27,7 +27,7 @@ public enum Valikko {
     
     LUONTINIMI,
     LUONTIKYSYMYKSET,
-    LUONTILOPETUS,
+    LUONTILOPETUS
     
    
     
