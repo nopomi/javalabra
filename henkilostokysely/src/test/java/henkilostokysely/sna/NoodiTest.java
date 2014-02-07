@@ -28,17 +28,29 @@ public class NoodiTest {
         assertEquals("Noodi123", noodi.toString());
     }
     
+    @Test
     public void getIdToimii(){
         assertEquals(123, noodi.getId());
     }
     
-    
+    @Test
     public void hashCodeToimii(){
         Noodi noodi2 = new Noodi(123);
         Noodi noodi3 = new Noodi(124);
         
         assertEquals(noodi.getId(), noodi2.getId());
         assertFalse(noodi.equals(noodi3));
+    }
+    
+    @Test
+    public void equalsToimii(){
+        
+        String lol = "noodi";
+        Noodi noodi2 = new Noodi(124);
+        assertFalse(noodi.equals(null));
+        assertFalse(noodi.equals(lol));
+        assertFalse(noodi.equals(noodi2));
+                
     }
     
     

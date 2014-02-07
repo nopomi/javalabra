@@ -82,4 +82,5 @@ public class KaavioTest {
         
         assertEquals(3, uusiKaavio.getEdgeCount());
     }
+    
 }

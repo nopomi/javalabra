@@ -3,6 +3,7 @@ package henkilostokysely.domain;
 
 import henkilostokysely.domain.Vastaustyyppi;
 import henkilostokysely.domain.Kysymys;
+import henkilostokysely.tallennus.VastaustenTallentaja;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -34,6 +35,20 @@ public class KysymysTest {
         assertEquals(-1, kyssari.getIndeksi());
         kyssari.setIndeksi(122);
         assertEquals(122, kyssari.getIndeksi());
+        
+        VastaustenTallentaja tallentaja = kyssari.getTallentaja();
+        assertEquals(122, tallentaja.getIndeksi());
+    }
+    
+    @Test
+    public void kysymyksenEqualsToimii(){
+        Kysymys kyssari = new Kysymys("Oletko", Vastaustyyppi.LIKERT,0);
+        Kysymys kyssari2 = new Kysymys("Oletko", Vastaustyyppi.ASTEIKKO, 0);
+        String kysymys = "hehz";
+        
+        assertFalse(kyssari.equals(kysymys));
+        assertFalse(kyssari.equals(kyssari2));
+        
     }
     
     @Test

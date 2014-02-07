@@ -41,7 +41,7 @@ public class Kaavio {
     public Noodi lisaaNoodi(Noodi noodi){
         if(!kaavio.containsVertex(noodi)){
             kaavio.addVertex(noodi);
-            return noodi;
+            
         } else {
             Collection<Noodi> noodit = kaavio.getVertices();
             for (Noodi seuraava : noodit) {
@@ -50,7 +50,7 @@ public class Kaavio {
                 }
             }
         }
-        return noodi;
+       return noodi;
     }
     
     /**

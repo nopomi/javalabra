@@ -7,6 +7,9 @@ package henkilostokysely.tilasto;
 /**
  *
  * @author Miska
+ * Toistaiseksi epäselvä, tulee jonkin sortin rakenne joka purkaa
+ * numeerista vastausdataa tilastoiksi ja ilmoittaa ne käyttöliittymälle
+ * 
  */
 public class VastaustenPurkaja {
     

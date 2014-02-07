@@ -69,7 +69,7 @@ public class VastaustenTallentaja {
      * @param vastaus3
      * @see henkilostokysely.domain.Vastaustyyppi
      */
-    public void talletavastaus(int vastaaja, int vastaus1, int vastaus2, int vastaus3){
+    public void talletaVastaus(int vastaaja, int vastaus1, int vastaus2, int vastaus3){
         try{
             FileWriter kirjoittaja = new FileWriter(this.indeksi+"_vastaukset.csv", true);
             kirjoittaja.append(vastaaja+","+vastaus1+","+vastaus2+","+vastaus3+"\n");

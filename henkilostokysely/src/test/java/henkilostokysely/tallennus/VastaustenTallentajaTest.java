@@ -1,6 +1,9 @@
 package henkilostokysely.tallennus;
 
 import henkilostokysely.tallennus.VastaustenTallentaja;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
 import org.junit.Test;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -24,13 +27,44 @@ public class VastaustenTallentajaTest {
     }
 
     @Test
-    public void vastaustenTalletusEiKuse() {
+    public void vastaustenTalletusEiKuse() throws FileNotFoundException {
         VastaustenTallentaja tallentaja = new VastaustenTallentaja(1);
         tallentaja.talletaVastaus(123, "hehehe");
-        tallentaja.talletaVastaus(666, "Hello csv!");
+        String[] osat = null;
+        
+        Scanner tiedostonLukija = new Scanner(new File("1_vastaukset.csv"));
+        
+        while(tiedostonLukija.hasNextLine()){
+            String rivi = tiedostonLukija.nextLine();
+            osat = rivi.split(",");
+        }
+        
+        assertEquals("123", osat[0].toString());
+        assertEquals("hehehe", osat[1].toString());
+        
 
     }
-
+    
+    @Test
+    public void vastaustenKolmitalnnennusEiKuse() throws FileNotFoundException {
+        VastaustenTallentaja tallentaja = new VastaustenTallentaja(333);
+        tallentaja.talletaVastaus(112, 1, 2, 3);
+    
+    String[] osat = null;
+    
+    Scanner tiedostonLukija = new Scanner(new File("333_vastaukset.csv"));
+    while(tiedostonLukija.hasNextLine()){
+        String rivi = tiedostonLukija.nextLine();
+        osat = rivi.split(",");
+    }
+    
+    assertEquals("112", osat[0].toString());
+    assertEquals("1", osat[1].toString());
+    assertEquals("2", osat[2].toString());
+    assertEquals("3", osat[3].toString());
+    
+    }
+    
     @Test
     public void vastaustenTalletusEiKuseIndeksinMuutoksellakaan() {
         VastaustenTallentaja tallentaja = new VastaustenTallentaja(1);

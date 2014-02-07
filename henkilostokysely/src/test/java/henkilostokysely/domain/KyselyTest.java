@@ -3,6 +3,7 @@ package henkilostokysely.domain;
 
 import henkilostokysely.domain.Vastaustyyppi;
 import henkilostokysely.domain.Kysely;
+import java.util.HashMap;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.After;
@@ -48,6 +49,11 @@ public class KyselyTest {
     public void lisaaKaksiKysymystaOikeinAvoin() {
         kysely.lisaaKysymys("trololo", Vastaustyyppi.LIKERT);
         kysely.lisaaKysymys("Kerro vähän", Vastaustyyppi.ASTEIKKO);
+        HashMap kyssarit = kysely.getKysymykset();
+        
+        assertTrue(kyssarit.containsKey(1));
+        assertTrue(kyssarit.containsKey(2));
+        
         assertEquals(2, kysely.getKysymykset().size());
     }
 
@@ -59,5 +65,6 @@ public class KyselyTest {
 
         assertEquals(2, kysely.getKysymykset().size());
         assertFalse(kysely.lisaaKysymys("trolo", Vastaustyyppi.LIKERT));
+        assertTrue(kysely.lisaaKysymys("Onko?", Vastaustyyppi.AVOIN));
     }
 }
