@@ -67,7 +67,7 @@ public class App {
 //        Kaavio kaavio = new Kaavio();
 //        System.out.println(kaavio.toString());
         
-        
+        Kyselysailio sailio = new Kyselysailio
         Kayttoliittyma kayttoliittyma = new Kayttoliittyma();
         SwingUtilities.invokeLater(kayttoliittyma);
 

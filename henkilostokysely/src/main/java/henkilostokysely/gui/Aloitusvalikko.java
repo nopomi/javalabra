@@ -24,7 +24,7 @@ public class Aloitusvalikko extends JPanel {
 
     private void luoKomponentit() {
 
-        JLabel label = new JLabel("Valitse toiminto:");
+        JLabel label = new JLabel("                      \nValitse toiminto:");
         JButton vastauspainike = new JButton("Vastaa");
         JButton analysointipainike = new JButton("Analysoi");
         JButton luontipainike = new JButton("Luo");
@@ -35,13 +35,16 @@ public class Aloitusvalikko extends JPanel {
         analysointipainike.addActionListener(kuuntelija);
         luontipainike.addActionListener(kuuntelija);
         
-        add(Box.createRigidArea(new Dimension(0, 100)));
+        add(new JLabel(""));
         add(label);
-        add(Box.createRigidArea(new Dimension(0, 100)));
+        add(new JLabel(""));
         add(vastauspainike);
         add(analysointipainike);
         add(luontipainike);
-        add(Box.createRigidArea(new Dimension(0,100)));
+        add(new JLabel(""));
+        add(new JLabel(""));
+        add(new JLabel(""));
+       
     }
     
     public void vaihdaValikko(Valikko vaihdettava){

@@ -28,10 +28,9 @@ public class NimiValikkoKuuntelija implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         String kyselynNimi = this.tekstikentta.getText();
-        //tähän tulee uuden kyselyn luonti
+        
+        
         valikko.vaihdaValikko(Valikko.LUONTIKYSYMYKSET);
-        
-        
         
     }
     

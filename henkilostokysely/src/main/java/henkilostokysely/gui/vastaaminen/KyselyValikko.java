@@ -10,4 +10,6 @@ package henkilostokysely.gui.vastaaminen;
  */
 public class KyselyValikko {
     
+    //muista swingin spinnerit.
+    
 }
