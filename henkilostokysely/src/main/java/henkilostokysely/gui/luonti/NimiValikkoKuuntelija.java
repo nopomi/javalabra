@@ -42,6 +42,7 @@ public class NimiValikkoKuuntelija implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         String kyselynNimi = this.tekstikentta.getText();
         Kysely uusiKysely = sailio.luoKysely(kyselynNimi);
+        valikko.vaihdaValikko(Valikko.LUONTIKYSYMYKSET, uusiKysely);
         
     }
     
