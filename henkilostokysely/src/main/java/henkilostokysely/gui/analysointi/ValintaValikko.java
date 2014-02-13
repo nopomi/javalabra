@@ -5,7 +5,7 @@
 package henkilostokysely.gui.analysointi;
 
 /**
- *
+ * @see Valikko
  * @author Miska
  */
 public class ValintaValikko {

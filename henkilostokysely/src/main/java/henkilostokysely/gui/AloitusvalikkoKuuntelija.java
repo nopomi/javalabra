@@ -5,8 +5,8 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 
 /**
- *
- * @author mnoponen@cs
+ * Aloitusvalikon kuuntelijaluokka
+ * @author miska
  */
 public class AloitusvalikkoKuuntelija implements ActionListener {
 
@@ -15,6 +15,14 @@ public class AloitusvalikkoKuuntelija implements ActionListener {
     private JButton analysoi;
     private JButton luo;
 
+    /**
+     * Painikkeet parametrina ottava konstruktori, myös aloitusvalikko tulee
+     * parametrina
+     * @param aloitusvalikko Aloitusvalikko johon tämä kuuluu
+     * @param vastaa aktivoi vastaustoiminnon
+     * @param analysoi aktivoi vastausten analysoinnin
+     * @param luo aktivoi kyselyn luomistoiminnon
+     */
     public AloitusvalikkoKuuntelija(Aloitusvalikko aloitusvalikko, JButton vastaa, JButton analysoi,
             JButton luo) {
         this.vastaa = vastaa;

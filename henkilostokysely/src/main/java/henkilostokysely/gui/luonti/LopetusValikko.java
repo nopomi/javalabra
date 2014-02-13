@@ -5,7 +5,7 @@
 package henkilostokysely.gui.luonti;
 
 /**
- *
+ * Valikko-luokka jossa vahvistetaan kyselyn luominen
  * @author Miska
  */
 public class LopetusValikko {

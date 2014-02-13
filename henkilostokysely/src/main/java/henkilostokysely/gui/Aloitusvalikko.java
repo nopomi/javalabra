@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package henkilostokysely.gui;
 
 import java.awt.*;
@@ -10,17 +6,22 @@ import javax.swing.*;
 
 /**
  *
- * @author mnoponen@cs
+ * Ensimmäinen päävalikko jossa valitaan mihin toimintoon siirrytään
  */
 public class Aloitusvalikko extends JPanel {
 
     private Kayttoliittyma kayttoliittyma;
 
+    /**
+     *
+     * @param kayttis
+     */
     public Aloitusvalikko(Kayttoliittyma kayttis) {
         super(new GridLayout(3, 3));
         luoKomponentit();
         this.kayttoliittyma=kayttis;
     }
+    
 
     private void luoKomponentit() {
 
@@ -47,6 +48,10 @@ public class Aloitusvalikko extends JPanel {
        
     }
     
+    /**
+     * Metodi viestii käyttöliittymälle valikon vaihdosta
+     * @param vaihdettava on valikko, johon vaihdetaan
+     */
     public void vaihdaValikko(Valikko vaihdettava){
         this.kayttoliittyma.vaihdaValikko(vaihdettava);
     }

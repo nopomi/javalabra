@@ -12,8 +12,9 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 
 /**
- *
+ * Kuuntelija-luokka joka liittyy nimivalikkoon
  * @author Miska
+ * @see NimiValikko
  */
 public class NimiValikkoKuuntelija implements ActionListener{
     
@@ -22,6 +23,13 @@ public class NimiValikkoKuuntelija implements ActionListener{
     private JTextField tekstikentta;
     private Kyselysailio sailio;
     
+    /**
+     *
+     * @param valikko
+     * @param tekstikentta
+     * @param tallennuspainike
+     * @param sailio
+     */
     public NimiValikkoKuuntelija(NimiValikko valikko, JTextField tekstikentta, 
             JButton tallennuspainike, Kyselysailio sailio){
         this.tallennuspainike=tallennuspainike;

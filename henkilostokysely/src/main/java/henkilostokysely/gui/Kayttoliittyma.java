@@ -13,7 +13,7 @@ import java.util.HashMap;
 import javax.swing.*;
 
 /**
- *
+ * Käyttöliittymän pääluokka
  * @author Miska
  */
 public class Kayttoliittyma implements Runnable {
@@ -23,6 +23,11 @@ public class Kayttoliittyma implements Runnable {
     private JPanel aktiivinen;
     private Kyselysailio sailio;
 
+    /**
+     * Saa parametrina kyselysäiliön, johon kyselyt talletetaan
+     * @param sailio
+     * @see Kyselysailio
+     */
     public Kayttoliittyma(Kyselysailio sailio) {
         this.sailio = sailio;
         this.valikot = new HashMap<>();
@@ -40,6 +45,12 @@ public class Kayttoliittyma implements Runnable {
         frame.setVisible(true);
     }
 
+    /**
+     * Luo kaikki valikot, jotka tässä vaiheessa voidaan luoda.
+     * Jotkut valikot ovat sen verran raskaita ja epätodennäköisesti
+     * aktivoidaan - että ne luodaan vasta sitten kun sinne siirrytään.
+     * @param container
+     */
     public void luoValikot(Container container) {
         BoxLayout layout = new BoxLayout(container, BoxLayout.Y_AXIS);
         container.setLayout(layout);
@@ -65,10 +76,19 @@ public class Kayttoliittyma implements Runnable {
 
     }
 
+    /**
+     * Vaihtaa aktiivista valikkoa, jonka avulla pidetään 
+     * kirjaa mikä on näkyvissä
+     * @param valikko valikko joka aktivoidaan
+     */
     public void setAktiivinen(JPanel valikko) {
         this.aktiivinen = valikko;
     }
 
+    /**
+     * Vaihtaa aktiivista valikkoa, ja asettaa näkyvyydet
+     * @param vaihdettava
+     */
     public void vaihdaValikko(Valikko vaihdettava) {
         this.aktiivinen.setVisible(false);
         JPanel vaihdettavaPanel = valikot.get(vaihdettava);
@@ -77,10 +97,18 @@ public class Kayttoliittyma implements Runnable {
 
     }
     
+    /**
+     * 
+     * @return
+     */
     public Kyselysailio getSailio(){
         return this.sailio;
     }
 
+    /**
+     *
+     * @return
+     */
     public JFrame getFrame() {
         return frame;
     }

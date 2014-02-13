@@ -7,13 +7,18 @@ import java.awt.*;
 import javax.swing.*;
 
 /**
- *
+ * Valikko-luokka jossa päätetään kyselyn nimi ja
+ * Kysely-olio luodaan
  * @author Miska
  */
 public class NimiValikko extends JPanel {
 
     private Kayttoliittyma kayttis;
 
+    /**
+     *
+     * @param kayttis
+     */
     public NimiValikko(Kayttoliittyma kayttis) {
         super(new GridLayout(3, 3));
         this.kayttis = kayttis;
@@ -46,12 +51,12 @@ public class NimiValikko extends JPanel {
         
     }
     
+    /**
+     *
+     * @param vaihdettava
+     */
     public void vaihdaValikko(Valikko vaihdettava){
         kayttis.vaihdaValikko(vaihdettava);
-    }
-    
-    public void luoKysymysValikko(Kysely kysely){
-        
     }
     
 }

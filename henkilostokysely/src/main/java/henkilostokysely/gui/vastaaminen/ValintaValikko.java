@@ -1,12 +1,12 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package henkilostokysely.gui.vastaaminen;
 
 /**
- *
+ * Valikko-luokka jossa valitaan kysely johon vastataan, 
+ * näkymässä listataan kaikki kyselyt joita säiliöstä löytyy
+ * 
  * @author Miska
+ * @see KyselyValikko
  */
 public class ValintaValikko {
     

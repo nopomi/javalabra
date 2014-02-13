@@ -1,11 +1,10 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package henkilostokysely.gui.analysointi;
 
+import henkilostokysely.gui.Valikko;
+
 /**
- *
+ * @see Valikko
  * @author Miska
  */
 public class AvoinValikko {
