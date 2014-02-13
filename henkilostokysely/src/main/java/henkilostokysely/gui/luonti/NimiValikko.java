@@ -1,5 +1,6 @@
 package henkilostokysely.gui.luonti;
 
+import henkilostokysely.domain.Kysely;
 import henkilostokysely.gui.Kayttoliittyma;
 import henkilostokysely.gui.Valikko;
 import java.awt.*;
@@ -28,7 +29,7 @@ public class NimiValikko extends JPanel {
         
         
         NimiValikkoKuuntelija kuuntelija = new NimiValikkoKuuntelija(
-                this, tekstiKentta, tallennuspainike);
+                this, tekstiKentta, tallennuspainike, kayttis.getSailio());
         
         tekstiKentta.addActionListener(kuuntelija);
         tallennuspainike.addActionListener(kuuntelija);
@@ -48,4 +49,9 @@ public class NimiValikko extends JPanel {
     public void vaihdaValikko(Valikko vaihdettava){
         kayttis.vaihdaValikko(vaihdettava);
     }
+    
+    public void luoKysymysValikko(Kysely kysely){
+        
+    }
+    
 }

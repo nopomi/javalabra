@@ -18,6 +18,7 @@ import java.awt.Dimension;
 import javax.swing.JFrame;
 import edu.uci.ics.jung.visualization.VisualizationImageServer;
 import edu.uci.ics.jung.graph.DirectedSparseGraph;
+import henkilostokysely.domain.Kyselysailio;
 import henkilostokysely.gui.Kayttoliittyma;
 import henkilostokysely.sna.Kaavio;
 import henkilostokysely.sna.Linkki;
@@ -67,8 +68,8 @@ public class App {
 //        Kaavio kaavio = new Kaavio();
 //        System.out.println(kaavio.toString());
         
-        Kyselysailio sailio = new Kyselysailio
-        Kayttoliittyma kayttoliittyma = new Kayttoliittyma();
+        Kyselysailio sailio = new Kyselysailio();
+        Kayttoliittyma kayttoliittyma = new Kayttoliittyma(sailio);
         SwingUtilities.invokeLater(kayttoliittyma);
 
 

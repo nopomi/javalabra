@@ -2,6 +2,7 @@ package henkilostokysely.gui;
 
 import edu.uci.ics.jung.algorithms.layout.CircleLayout;
 import edu.uci.ics.jung.visualization.VisualizationImageServer;
+import henkilostokysely.domain.Kyselysailio;
 import henkilostokysely.gui.analysointi.*;
 import henkilostokysely.gui.luonti.NimiValikko;
 import henkilostokysely.gui.Valikko;
@@ -20,8 +21,10 @@ public class Kayttoliittyma implements Runnable {
     private JFrame frame;
     private HashMap<Valikko, JPanel> valikot;
     private JPanel aktiivinen;
+    private Kyselysailio sailio;
 
-    public Kayttoliittyma() {
+    public Kayttoliittyma(Kyselysailio sailio) {
+        this.sailio = sailio;
         this.valikot = new HashMap<>();
     }
 
@@ -72,6 +75,10 @@ public class Kayttoliittyma implements Runnable {
         vaihdettavaPanel.setVisible(true);
         setAktiivinen(vaihdettavaPanel);
 
+    }
+    
+    public Kyselysailio getSailio(){
+        return this.sailio;
     }
 
     public JFrame getFrame() {
