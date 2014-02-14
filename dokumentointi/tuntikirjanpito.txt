@@ -15,4 +15,7 @@ Tuntikirjanpito:
 12.2. 11:00-13:00 (2h) Käyttöliittymän kehittäminen
 13.2. 18:30-22:00 (3h30min) Käyttöliittymä jatkuu, javadocien tekeminen ja luokkakaavion päivitys
 
+Viikon 5 deadlinessä ei oma ohjelma ole hirveästi laajentunut, johtuen viisaudenhampaiden poistosta
+ja sen seuraksena vahvasta lääkityksestä. Kompensoin tätä puutetta seuraavien päivien aikana. Pahoittelut
+
 Saldo nyt: 40h20min
