@@ -53,7 +53,6 @@ public class KysymysValikko extends JPanel {
         vastaustyyppi.addActionListener(kuuntelija);
         seuraavaPainike.addActionListener(kuuntelija);
         tallennuspainike.addActionListener(kuuntelija);
-        
 
         add(otsikko);
         add(tyhja);

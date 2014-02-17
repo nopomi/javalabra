@@ -12,9 +12,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
-import javax.swing.JPanel;
 import javax.swing.JTextField;
-import javax.swing.JTextPane;
 
 /**
  *
@@ -69,7 +67,7 @@ public class KysymysValikkoKuuntelija implements ActionListener {
         if (e.getSource() == lisaa) {
             valikko.lisaaKysymys(kysymysTekstina, tyyppi);
             lisaystieto.setText("Lisätty! Kysymyksiä: " + valikko.annaKyselynKoko());
-            
+            kysymys.setText("");
 
         }
     }

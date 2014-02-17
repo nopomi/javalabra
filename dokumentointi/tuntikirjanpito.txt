@@ -13,9 +13,14 @@ Tuntikirjanpito:
 05.2. 11:30-14:30 (3h) Käyttöliittymäohjelmointi
 06.2. 18:30-22:00 (3h30min) käyttöliittymän ohjelmointia
 12.2. 11:00-13:00 (2h) Käyttöliittymän kehittäminen
-13.2. 18:30-22:00 (3h30min) Käyttöliittymä jatkuu, javadocien tekeminen ja luokkakaavion päivitys
+13.2. 18:30-22:00 (3h30min) Käyttöliittymä jatkuu, javadocien tekeminen ja luokkakaavion päivitys. Sekvenssikaaviot myös.
+14.2. 13:30-17:30 (4h) Sovelluslogiikan työstämistä, loppuprojektin tekemisen aikataulutusta
+15.2. 12:00-15:00 (3h) Sovelluslogiikan jatkopäivä, pieniä muutoksia käyttöliittymään
+16.2. 13:00-15:00 (2h) Koodikatselmointi ja pieniä muutoksia omaan ohjelmaan.
+17.2. 12:30-17:30 (5h) Käyttöliittymäohjelmointi, luontiosuus ja vastausosuus
 
-Viikon 5 deadlinessä ei oma ohjelma ole hirveästi laajentunut, johtuen viisaudenhampaiden poistosta
+
+13022014: Viikon 5 deadlinessä ei oma ohjelma ole hirveästi laajentunut, johtuen viisaudenhampaiden poistosta
 ja sen seuraksena vahvasta lääkityksestä. Kompensoin tätä puutetta seuraavien päivien aikana. Pahoittelut
 
-Saldo nyt: 40h20min
+Saldo nyt: 54h20min
