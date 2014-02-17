@@ -18,6 +18,14 @@ public class Kyselysailio {
 public void lisaaKysely(Kysely kysely){
     kyselyt.put(kysely.getNimi(), kysely);
 }
+
+public Kysely luoKysely(String nimi){
+    
+    Kysely uusiKysely = new Kysely(nimi);
+    kyselyt.put(nimi, uusiKysely);
+    
+    return uusiKysely;
+}
     
     
 }

@@ -6,11 +6,15 @@
 package henkilostokysely.gui.luonti;
 
 import henkilostokysely.domain.Vastaustyyppi;
+import henkilostokysely.gui.Valikko;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.JTextPane;
 
 /**
  *
@@ -23,15 +27,18 @@ public class KysymysValikkoKuuntelija implements ActionListener {
     private JComboBox vastaustyyppi;
     private JButton valmis;
     private JButton lisaa;
+    private JLabel lisaystieto;
 
     public KysymysValikkoKuuntelija(KysymysValikko valikko,
             JTextField tekstikentta, JComboBox vastaustyyppi,
-            JButton valmisPainike, JButton lisayspainike) {
+            JButton lisayspainike, JButton valmisPainike,
+            JLabel lisaysTeksti) {
         this.valikko = valikko;
         this.kysymys = tekstikentta;
         this.vastaustyyppi = vastaustyyppi;
         this.valmis = valmisPainike;
         this.lisaa = lisayspainike;
+        this.lisaystieto=lisaysTeksti;
 
     }
 
@@ -57,13 +64,13 @@ public class KysymysValikkoKuuntelija implements ActionListener {
             if(!kysymysTekstina.isEmpty()){
                 valikko.lisaaKysymys(kysymysTekstina, tyyppi);
             }
-            valikko.tallennaKysely();
+            valikko.vaihdaValikko(Valikko.LUONTILOPETUS);
 
         }
         if (e.getSource() == lisaa) {
             valikko.lisaaKysymys(kysymysTekstina, tyyppi);
-          
-
+            lisaystieto.setText("Lisätty! Kysymyksiä: "+ valikko.annaKyselynKoko());
+            
 
         }
     }

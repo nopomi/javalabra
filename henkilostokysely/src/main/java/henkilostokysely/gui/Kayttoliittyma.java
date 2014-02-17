@@ -2,6 +2,7 @@ package henkilostokysely.gui;
 
 import edu.uci.ics.jung.algorithms.layout.CircleLayout;
 import edu.uci.ics.jung.visualization.VisualizationImageServer;
+import henkilostokysely.domain.Kysely;
 import henkilostokysely.domain.Kyselysailio;
 import henkilostokysely.gui.analysointi.*;
 import henkilostokysely.gui.luonti.NimiValikko;
@@ -96,6 +97,13 @@ public class Kayttoliittyma implements Runnable {
         setAktiivinen(vaihdettavaPanel);
 
     }
+    
+    
+    public void lisaaValikko(Valikko valikko, JPanel paneeli){
+        valikot.put(valikko, paneeli);
+        frame.getContentPane().add(paneeli);
+    }
+
     
     
     /**

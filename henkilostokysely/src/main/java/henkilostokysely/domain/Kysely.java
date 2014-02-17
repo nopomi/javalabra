@@ -68,5 +68,9 @@ public class Kysely {
     public String getNimi(){
         return this.nimi;
     }
+    
+    public int getKoko(){
+        return this.kysymykset.size();
+    }
         
 }
