@@ -60,7 +60,7 @@ public class NimiValikko extends JPanel {
     }
 
     void vaihdaValikko(Valikko valikko, Kysely uusiKysely) {
-        //KysmysValikko kyssariValikko = new KysmysValikko(uusiKysely);
+        KysymysValikko kyssariValikko = new KysymysValikko(kayttis, uusiKysely);
     }
     
 }

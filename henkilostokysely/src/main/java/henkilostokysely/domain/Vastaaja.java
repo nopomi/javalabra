@@ -13,7 +13,6 @@ public class Vastaaja {
 
     private int henkilostoNumero;
     private String nimi;
-    private ArrayList<String> vastatut;
 
     /**
      * Metodi luo uuden Vastaaja-olion asettaen sille yksilöivän 
@@ -24,7 +23,6 @@ public class Vastaaja {
     public Vastaaja(int henkilostoNumero, String nimi){
         this.henkilostoNumero = henkilostoNumero;
         this.nimi = nimi;
-        this.vastatut = new ArrayList<>();
     }
     
     

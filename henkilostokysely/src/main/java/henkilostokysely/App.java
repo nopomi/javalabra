@@ -1,6 +1,7 @@
 package henkilostokysely;
 
 import com.sun.corba.se.impl.orbutil.graph.Graph;
+import edu.uci.ics.jung.algorithms.importance.BetweennessCentrality;
 import edu.uci.ics.jung.algorithms.layout.CircleLayout;
 import edu.uci.ics.jung.graph.SparseMultigraph;
 import edu.uci.ics.jung.graph.util.EdgeType;
@@ -58,14 +59,18 @@ public class App {
 //        VisualizationImageServer vs =
 //                new VisualizationImageServer(
 //                new CircleLayout(g), new Dimension(200, 200));
-//
 //        JFrame frame = new JFrame();
 //        frame.getContentPane().add(vs);
 //        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 //        frame.pack();
 //        frame.setVisible(true);
-        
+//        
 //        Kaavio kaavio = new Kaavio();
+//        
+//        BetweennessCentrality centrality = new BetweennessCentrality(g);
+//        centrality.evaluate();
+//        centrality.getRankings();
+//        
 //        System.out.println(kaavio.toString());
         
         Kyselysailio sailio = new Kyselysailio();
