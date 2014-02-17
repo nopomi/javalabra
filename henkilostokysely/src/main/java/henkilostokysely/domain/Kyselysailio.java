@@ -19,6 +19,14 @@ public void lisaaKysely(Kysely kysely){
     kyselyt.put(kysely.getNimi(), kysely);
 }
 
+public HashMap getKyselyt(){
+    return this.kyselyt;
+}
+
+public Kysely getKysely(String nimi){
+    return kyselyt.get(nimi);
+}
+
 public Kysely luoKysely(String nimi){
     
     Kysely uusiKysely = new Kysely(nimi);

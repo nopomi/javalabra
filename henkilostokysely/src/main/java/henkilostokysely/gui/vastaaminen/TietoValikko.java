@@ -5,6 +5,7 @@ import henkilostokysely.gui.Kayttoliittyma;
 import henkilostokysely.gui.Valikko;
 import java.awt.GridLayout;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
@@ -26,22 +27,38 @@ public class TietoValikko extends JPanel {
     }
 
     private void luoKomponentit() {
+        JLabel tyhja = new JLabel("");
+        JLabel tayttoKehotus = new JLabel("Syötä nimesi ja henkilöstönumerosi");
+        JLabel tyhja2 = new JLabel("");
         JTextField nimiKentta = new JTextField();
         JTextField henkilostoNumeroKentta = new JTextField();
-        JButton tallennuspainike = new JButton("");
-        
+        JLabel tyhja3 = new JLabel("");
+        JButton tallennuspainike = new JButton("Tallenna");
+
         TietoValikkoKuuntelija kuuntelija = new TietoValikkoKuuntelija(this, nimiKentta,
-        henkilostoNumeroKentta, tallennuspainike);
-        
+                henkilostoNumeroKentta, tallennuspainike);
+
         nimiKentta.addActionListener(kuuntelija);
         henkilostoNumeroKentta.addActionListener(kuuntelija);
         tallennuspainike.addActionListener(kuuntelija);
-        
-        
+
+
+        add(tyhja);
+        add(tayttoKehotus);
+        add(tyhja2);
+        add(nimiKentta);
+        add(henkilostoNumeroKentta);
+        add(tyhja3);
+        add(tallennuspainike);
+
+
+
+
     }
 
     void vaihdaValikko(Valikko valikko, Vastaaja vastaaja) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
+        kayttis.vaihdaValikko(valikko);
+
+    }
 }
