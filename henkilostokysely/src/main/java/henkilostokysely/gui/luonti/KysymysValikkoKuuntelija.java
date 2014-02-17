@@ -38,7 +38,7 @@ public class KysymysValikkoKuuntelija implements ActionListener {
         this.vastaustyyppi = vastaustyyppi;
         this.valmis = valmisPainike;
         this.lisaa = lisayspainike;
-        this.lisaystieto=lisaysTeksti;
+        this.lisaystieto = lisaysTeksti;
 
     }
 
@@ -47,21 +47,20 @@ public class KysymysValikkoKuuntelija implements ActionListener {
         Vastaustyyppi tyyppi = null;
         String kysymysTekstina = kysymys.getText();
         int tyyppiIndeksi = vastaustyyppi.getSelectedIndex();
-            
-            if (tyyppiIndeksi == 0) {
-                tyyppi = Vastaustyyppi.AVOIN;
-            } else if (tyyppiIndeksi == 1) {
-                tyyppi = Vastaustyyppi.LIKERT;
-            } else if (tyyppiIndeksi == 2) {
-                tyyppi = Vastaustyyppi.ASTEIKKO;
-            } else if (tyyppiIndeksi == 3) {
-                tyyppi = Vastaustyyppi.KOLMIKENTTA;
-            }
 
-        
+        if (tyyppiIndeksi == 0) {
+            tyyppi = Vastaustyyppi.AVOIN;
+        } else if (tyyppiIndeksi == 1) {
+            tyyppi = Vastaustyyppi.LIKERT;
+        } else if (tyyppiIndeksi == 2) {
+            tyyppi = Vastaustyyppi.ASTEIKKO;
+        } else if (tyyppiIndeksi == 3) {
+            tyyppi = Vastaustyyppi.KOLMIKENTTA;
+        }
+
         if (e.getSource() == valmis) {
-            //tähän kysymyksen tallennus ja siirtyminen lopetusvalikkoon.
-            if(!kysymysTekstina.isEmpty()){
+
+            if (!kysymysTekstina.isEmpty()) {
                 valikko.lisaaKysymys(kysymysTekstina, tyyppi);
             }
             valikko.vaihdaValikko(Valikko.LUONTILOPETUS);
@@ -69,10 +68,8 @@ public class KysymysValikkoKuuntelija implements ActionListener {
         }
         if (e.getSource() == lisaa) {
             valikko.lisaaKysymys(kysymysTekstina, tyyppi);
-            lisaystieto.setText("Lisätty! Kysymyksiä: "+ valikko.annaKyselynKoko());
-            
+            lisaystieto.setText("Lisätty! Kysymyksiä: " + valikko.annaKyselynKoko());
 
         }
     }
-    }
-
+}
