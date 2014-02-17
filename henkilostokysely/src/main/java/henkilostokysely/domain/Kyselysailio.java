@@ -15,12 +15,9 @@ public class Kyselysailio {
         this.kyselyt=new HashMap<>();
     }
     
-    public Kysely luoKysely(String nimi){
-        Kysely uusiKysely = new Kysely(nimi);
-        kyselyt.put(nimi, uusiKysely);
-        
-        return uusiKysely;
-    }
+public void lisaaKysely(Kysely kysely){
+    kyselyt.put(kysely.getNimi(), kysely);
+}
     
     
 }
