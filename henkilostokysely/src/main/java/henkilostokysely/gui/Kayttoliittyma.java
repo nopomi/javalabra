@@ -1,16 +1,11 @@
 package henkilostokysely.gui;
 
-import edu.uci.ics.jung.algorithms.layout.CircleLayout;
-import edu.uci.ics.jung.visualization.VisualizationImageServer;
-import henkilostokysely.domain.Kysely;
 import henkilostokysely.domain.Kyselysailio;
-import henkilostokysely.gui.analysointi.*;
 import henkilostokysely.gui.luonti.NimiValikko;
 import henkilostokysely.gui.Valikko;
 import henkilostokysely.gui.luonti.LopetusValikko;
 import java.awt.Container;
 import java.awt.Dimension;
-import java.util.EnumMap;
 import java.util.HashMap;
 import javax.swing.*;
 

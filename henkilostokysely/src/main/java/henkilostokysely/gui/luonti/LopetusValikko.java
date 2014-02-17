@@ -5,6 +5,7 @@
 package henkilostokysely.gui.luonti;
 
 import henkilostokysely.gui.Kayttoliittyma;
+import henkilostokysely.gui.Valikko;
 import java.awt.GridLayout;
 import javax.swing.*;
 
@@ -30,8 +31,32 @@ public class LopetusValikko extends JPanel{
         JLabel kiitosTeksti = new JLabel("Kiitos! \n Kysely on nyt luotu ja "
                 + "tallennettu järjestelmään. Palaa päävalikkoon jos haluat jatkaa:");
         JLabel tyhja2 = new JLabel();
-        JButton palaaValikkoon = new JButton("Palaa päävalikkoon");
         JLabel tyhja3 = new JLabel();
+        JButton palaaValikkoon = new JButton("Palaa päävalikkoon");
+        JLabel tyhja4 = new JLabel();
+        
+        LopetusValikkoKuuntelija kuuntelija = new LopetusValikkoKuuntelija(this,
+        palaaValikkoon);
+        
+        palaaValikkoon.addActionListener(kuuntelija);
+        
+        add(tyhja);
+        add(kiitosTeksti);
+        add(tyhja2);
+        add(tyhja3);
+        add(palaaValikkoon);
+        add(tyhja4);
+        add(new JLabel(""));
+        add(new JLabel(""));
+        add(new JLabel(""));
+        
+        
+        
+    }
+    
+    public void vaihdaValikko(Valikko vaihdettava){
+        
+        kayttis.vaihdaValikko(vaihdettava);
         
     }
     

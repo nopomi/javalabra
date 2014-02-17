@@ -6,6 +6,7 @@ import javax.swing.*;
 
 /**
  * Aloitusvalikon kuuntelijaluokka
+ *
  * @author miska
  */
 public class AloitusvalikkoKuuntelija implements ActionListener {
@@ -18,12 +19,14 @@ public class AloitusvalikkoKuuntelija implements ActionListener {
     /**
      * Painikkeet parametrina ottava konstruktori, myös aloitusvalikko tulee
      * parametrina
+     *
      * @param aloitusvalikko Aloitusvalikko johon tämä kuuluu
      * @param vastaa aktivoi vastaustoiminnon
      * @param analysoi aktivoi vastausten analysoinnin
      * @param luo aktivoi kyselyn luomistoiminnon
      */
-    public AloitusvalikkoKuuntelija(Aloitusvalikko aloitusvalikko, JButton vastaa, JButton analysoi,
+    public AloitusvalikkoKuuntelija(Aloitusvalikko aloitusvalikko, JButton vastaa,
+            JButton analysoi,
             JButton luo) {
         this.vastaa = vastaa;
         this.analysoi = analysoi;
@@ -34,7 +37,6 @@ public class AloitusvalikkoKuuntelija implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
 
         if (e.getSource() == vastaa) {
             valikko.vaihdaValikko(Valikko.VASTAAJAKYSELY);
