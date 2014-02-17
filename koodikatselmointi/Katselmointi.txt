@@ -1,0 +1,32 @@
+Katselmoitava git: https://github.com/makroma/OhHa
+
+
+zip ladattu 15.2.2014 klo 17:16
+
+Palaute:
+
+
+Ensinäkin haluisin yleisellä tasolla kehua huikeesta pelistä, tosi toimiva ja tyylikkään näkönen. Nokkelasti oot lisäksi käyttänyt sekä tekstiä että graafista käyttöliittymää rinnakkain. Javadocit on selkeitä ja ohjelman rakenne on musta suurilta osin hyvin helposti tulkittavissa. Myös metodin sisäiset kommentit ovat tosi järkevissä kohdissa ja selventävät mitä mikäkin vaihe tekee.
+
+Muuta kommenttia.
+-Ohjelman rakenne on nyt sellainen, että peli luodaan luomalla uusi grafiikkamoottori, joka puolestaan luo pelilogiikan, nappulasetin ja laudan. Mielestäni olisi loogisempaa jos luotaisiin instanssi pelilogiikasta joka sitten antaisi itsensä ja nappulasetin parametrina grafiikkamoottorille. (Single responsibility principleä ajatellen). Silloin se voisi myös tuntea NappulaSetin, jolloin sitä ei tarvitsisi antaa parametrina. Voi olla että olet miettinyt asiaa ja päätynyt että oma ratkaisusi on parempi, mutta en ainakaan nyt löytänyt syytä tähän. 
+
+-Nappulasetin ja Pelilogiikan välinen tehtäväjaottelu on mielestäni hieman epäselvä. Ilmeisesti pelilogiikka tarkistaa esteet ja hoitaa kaikkien eri nappuloiden liikkumisen. Lisäksi se luo pelinappulat. Voisit ehkä harkita nappuloiden luomisen vastuun siirtämistä Nappulasetille. Siten että se konstruktorissaan kutsuisi toista metodia NappulaSet-luokan sisällä joka luo ja lisää kaikki nappulat NappulaSetiin.
+
+-Nappuloiden luomismetodin voisi nimetä uudelleen esim luoNappulatLaudalle (nyt se sanoo että luo Sotilaat, se luo muutkin nappulat)
+
+-Tällä hetkellä Nappula itse tietää onko se valittu vai ei, ja valitun selvittäminen toimii siten että se nappulat käydään läpi yksi kerrallaan ja kysytään oletko valittu. Voisit harkita että nappulasetissä olisi muuttuja "private Nappula valittu", joka pitäisi kirjaa siitä mikä nappula nyt onkaan valittuna. Voi kuitenkin olla että tämä on ongelmallinen kun NappulaSet sisältää Listin nappuloita, eikä esim HashMapiä. (Eli tämän voit varmaan jättää huomoimatta)
+
+-Metodit on joissain kohdissa nimetty hieman epäyhdenmukaisesti. Jotkut on nimetty muotoon jossa se on selkeästi komento, esim "tulostaValitunNappulanMahdollisetSiirrot...", mutta toisaalla ne on nimetty substantiiveiksi, esim "asciiLautaTulostin". Muita substantiiveiksi nimettyjä: nappulanLiikkumistoiminto, asciiMahdollisetSiirrot. 
+Muutoin muuttujat ja metodit on mielestäni nimetty hämmästyttävän selkeästi. Isot propsit siitä, parantaa luettavuutta tosi paljon.
+
+-Testit on ilmeisesti kesken, ja kattavuus siitä johtuen vähän alakanttiin. Laittaisin itse ainakin suosiolla pom.xml:ään merkinnät että ei testaa Grafiikkaa ollenkaan vaan pelkästään muita paketteja. (Tämä ilmeisesti tällä kurssilla ihan kosheria?)
+
+-Nyt olet monissa kohdissa testeissä laittanut että "assertEquals(true, jokuMetodiJokaPalauttaaBooleanin)". Sen pystyy tekemään yksinkertaisemmin käyttämällä metodeja assertTrue ja assertFalse. Nää on aika käteviä.
+
+
+Mut kaiken kaikkiaan paljon parempi ohjelma kuin mulla ja tosi hyvän näkönen, toivottavasti näistä ideoista on jotain hyötyä ohjelman teossa.
+Tsemiä jatkoon ja laita viestii jos joku on epäselvää esim /msg mide` ircnetissä tai haluut muuten kommentoida mun laittamia juttuja :) 
+
+
+
