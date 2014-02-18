@@ -2,8 +2,9 @@ package henkilostokysely.gui;
 
 import henkilostokysely.domain.Kyselysailio;
 import henkilostokysely.gui.luonti.NimiValikko;
-import henkilostokysely.gui.Valikko;
 import henkilostokysely.gui.luonti.LopetusValikko;
+import henkilostokysely.gui.vastaaminen.TietoValikko;
+import henkilostokysely.gui.vastaaminen.ValintaValikko;
 import java.awt.Container;
 import java.awt.Dimension;
 import java.util.HashMap;
@@ -55,16 +56,21 @@ public class Kayttoliittyma implements Runnable {
         Aloitusvalikko aloitusvalikko = new Aloitusvalikko(this);
         NimiValikko luontinimi = new NimiValikko(this);
         LopetusValikko luontilopetus = new LopetusValikko(this);
+        TietoValikko vastaajatieto = new TietoValikko(this);
+   
         //tähän tulee kaikkien valikkojen luominen
 
         valikot.put(Valikko.ALOITUS, aloitusvalikko);
         valikot.put(Valikko.LUONTINIMI, luontinimi);
         valikot.put(Valikko.LUONTILOPETUS, luontilopetus);
-
+        valikot.put(Valikko.VASTAAJATIETO, vastaajatieto);
+        
+                
 
         aloitusvalikko.setVisible(true);
         luontinimi.setVisible(false);
         luontilopetus.setVisible(false);
+        vastaajatieto.setVisible(false);
         
         
         setAktiivinen(aloitusvalikko);
@@ -73,6 +79,7 @@ public class Kayttoliittyma implements Runnable {
         container.add(aloitusvalikko);
         container.add(luontinimi);
         container.add(luontilopetus);
+        container.add(vastaajatieto);
         //tähän tulee kaikkien valikkojen lisääminen käyttöliittymään
 
     }

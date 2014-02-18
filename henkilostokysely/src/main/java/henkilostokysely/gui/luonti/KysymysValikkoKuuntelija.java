@@ -68,7 +68,6 @@ public class KysymysValikkoKuuntelija implements ActionListener {
             valikko.lisaaKysymys(kysymysTekstina, tyyppi);
             lisaystieto.setText("Lisätty! Kysymyksiä: " + valikko.annaKyselynKoko());
             kysymys.setText("");
-
         }
     }
 }

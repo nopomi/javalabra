@@ -49,6 +49,7 @@ public class TietoValikko extends JPanel {
         add(nimiKentta);
         add(henkilostoNumeroKentta);
         add(tyhja3);
+        add(new JLabel(""));
         add(tallennuspainike);
 
 
@@ -57,7 +58,9 @@ public class TietoValikko extends JPanel {
     }
 
     void vaihdaValikko(Valikko valikko, Vastaaja vastaaja) {
-
+        ValintaValikko kyselynvalintaValikko = new ValintaValikko(kayttis,
+                vastaaja);
+        kayttis.lisaaValikko(Valikko.VASTAAJAVALINTA, kyselynvalintaValikko);
         kayttis.vaihdaValikko(valikko);
 
     }

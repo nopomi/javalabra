@@ -28,8 +28,7 @@ public class LopetusValikko extends JPanel{
     private void luoKomponentit(){
         
         JLabel tyhja = new JLabel("");
-        JLabel kiitosTeksti = new JLabel("Kiitos! \n Kysely on nyt luotu ja "
-                + "tallennettu järjestelmään. Palaa päävalikkoon jos haluat jatkaa:");
+        JLabel kiitosTeksti = new JLabel("Kiitos! \n Kysely on nyt luotu.");
         JLabel tyhja2 = new JLabel();
         JLabel tyhja3 = new JLabel();
         JButton palaaValikkoon = new JButton("Palaa päävalikkoon");

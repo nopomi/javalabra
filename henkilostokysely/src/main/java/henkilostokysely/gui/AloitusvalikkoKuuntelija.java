@@ -39,7 +39,7 @@ public class AloitusvalikkoKuuntelija implements ActionListener {
     public void actionPerformed(ActionEvent e) {
 
         if (e.getSource() == vastaa) {
-            valikko.vaihdaValikko(Valikko.VASTAAJAKYSELY);
+            valikko.vaihdaValikko(Valikko.VASTAAJATIETO);
         } else if (e.getSource() == analysoi) {
             valikko.vaihdaValikko(Valikko.ANALYSOINTIKYSELY);
         } else if (e.getSource() == luo) {

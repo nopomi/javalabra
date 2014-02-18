@@ -1,6 +1,7 @@
 package henkilostokysely.gui.vastaaminen;
 
 import henkilostokysely.domain.Kysely;
+import henkilostokysely.domain.Vastaaja;
 import henkilostokysely.gui.Kayttoliittyma;
 import henkilostokysely.gui.Valikko;
 import java.awt.Dimension;
@@ -27,10 +28,13 @@ public class ValintaValikko extends JPanel {
 
     private Kayttoliittyma kayttis;
     private String[] kyselyt;
+    private Vastaaja vastaaja;
 
-    public ValintaValikko(Kayttoliittyma kayttis) {
+    public ValintaValikko(Kayttoliittyma kayttis, Vastaaja vastaaja) {
         super(new GridLayout(3, 3, 10, 10));
         this.kayttis = kayttis;
+        this.vastaaja=vastaaja;
+        this.kyselyt=new String[10];
         luoKomponentit();
     }
 
@@ -40,13 +44,13 @@ public class ValintaValikko extends JPanel {
         JLabel tyhja2 = new JLabel("");
 
         int i = 0;
-        for (Iterator it = kayttis.getSailio().getKyselyt().keySet().iterator(); it.hasNext();) {
-            String nimi = (String)it.next();
+        for (Object o : kayttis.getSailio().getKyselyt().keySet()) {
+            String nimi = (String)o;
             kyselyt[i]=nimi;
             i++;
         }
         
-        JList<String> nimiLista = new JList<>(kyselyt);
+        JList nimiLista = new JList(kyselyt);
         nimiLista.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         nimiLista.setLayoutOrientation(JList.HORIZONTAL_WRAP);
         nimiLista.setVisibleRowCount(-1);
@@ -55,12 +59,20 @@ public class ValintaValikko extends JPanel {
         
         JLabel tyhja3 = new JLabel("");
         JButton valintaPainike = new JButton("Valitse");
+        JLabel tyhja4 = new JLabel("");
         
         ValintaValikkoKuuntelija kuuntelija = new ValintaValikkoKuuntelija(
                 this, nimiLista, valintaPainike, kyselyt);
         
 
-        // tästä puuttuu vielä äddit!
+        add(tyhja);
+        add(valintaKehotus);
+        add(tyhja2);
+        add(listanScrollaaja);
+        add(tyhja3);
+        add(valintaPainike);
+        add(tyhja4);
+        
 
     }
     
