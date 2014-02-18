@@ -45,7 +45,7 @@ public class KyselyValikko extends JPanel {
 
         for (Object k : kysymykset.values()) {
             Kysymys kysymys = (Kysymys) k;
-            add(new JLabel(kysymys.getKysymys()));
+            
 
             if (kysymys.getTyyppi() == Vastaustyyppi.ASTEIKKO) {
                 AsteikkoVastausKentta asteikkoKentta = new AsteikkoVastausKentta(kysymys);
