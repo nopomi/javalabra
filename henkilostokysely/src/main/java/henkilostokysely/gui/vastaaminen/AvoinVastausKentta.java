@@ -14,12 +14,17 @@ import javax.swing.JPanel;
  *
  * @author mnoponen@cs
  */
-public class AvoinVastausKentta extends JPanel{
+public class AvoinVastausKentta extends JPanel implements VastausKentta{
     private Kysymys kysymys;
     
     public AvoinVastausKentta(Kysymys kysymys){
         super(new GridLayout(1,2));
         this.kysymys=kysymys;
+    }
+
+    @Override
+    public String getVastaus() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

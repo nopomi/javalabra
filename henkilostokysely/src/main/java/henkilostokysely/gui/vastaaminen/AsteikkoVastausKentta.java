@@ -16,7 +16,7 @@ import javax.swing.JPanel;
  *
  * @author mnoponen@cs
  */
-public class AsteikkoVastausKentta extends JPanel{
+public class AsteikkoVastausKentta extends JPanel implements VastausKentta{
     private Kysymys kysymys;
     private String[] vaihtoehdot = {"1", "2", "3", "4", "5"};
     
@@ -30,5 +30,10 @@ public class AsteikkoVastausKentta extends JPanel{
         add(new JLabel(kysymys.getKysymys()));
         JComboBox vastaus = new JComboBox(vaihtoehdot);
         add(vastaus);
+    }
+
+    @Override
+    public String getVastaus() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

@@ -15,13 +15,18 @@ import javax.swing.JTextField;
  *
  * @author mnoponen@cs
  */
-public class KolmiKentta extends JPanel{
+public class KolmiKentta extends JPanel implements VastausKentta{
     
     public KolmiKentta(Kysymys kysymys){
         super(new GridLayout(3,1,5,0));
         add(new JTextField());
         add(new JTextField());
         add(new JTextField());
+    }
+
+    @Override
+    public String getVastaus() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

@@ -64,6 +64,8 @@ public class ValintaValikko extends JPanel {
         ValintaValikkoKuuntelija kuuntelija = new ValintaValikkoKuuntelija(
                 this, nimiLista, valintaPainike, kyselyt);
         
+        valintaPainike.addActionListener(kuuntelija);
+        
 
         add(tyhja);
         add(valintaKehotus);
@@ -83,8 +85,11 @@ public class ValintaValikko extends JPanel {
     
     public void vaihdaValikko(Valikko vaihettava, int kyselyIndeksi){
         Kysely valittuKysely = (Kysely)kayttis.getSailio().getKyselyt().get(kyselyt[kyselyIndeksi]);
-        //lisää tähän tai kyselyvalikon puolelle käyttikseen valikon lisääminen,
-        //ja valikon vaihto.
         KyselyValikko kyselyValikko = new KyselyValikko(kayttis, valittuKysely);
+        kayttis.lisaaValikko(Valikko.VASTAAJAKYSELY, kyselyValikko);
+    }
+    
+    public Kysely getKysely(String avain){
+        return kayttis.getSailio().getKysely(avain);
     }
 }

@@ -5,6 +5,7 @@
 package henkilostokysely.gui.vastaaminen;
 
 import henkilostokysely.domain.Kysely;
+import henkilostokysely.gui.Valikko;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
@@ -37,8 +38,11 @@ public class ValintaValikkoKuuntelija implements ActionListener{
         if(e.getSource()==valintaPainike){
             int valintaIndeksi;
             valintaIndeksi = kyselyValikko.getSelectedIndex();
+            if(valintaIndeksi==-1){
+               return;
+            }
             
-            
+            valikko.vaihdaValikko(Valikko.VASTAAJAKYSELY, valintaIndeksi);
         }
     }
 }

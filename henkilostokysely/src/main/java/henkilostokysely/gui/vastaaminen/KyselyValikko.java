@@ -5,13 +5,11 @@ import henkilostokysely.domain.Kysymys;
 import henkilostokysely.domain.Vastaustyyppi;
 import henkilostokysely.gui.Kayttoliittyma;
 import henkilostokysely.gui.Valikko;
-import java.awt.FlowLayout;
 import java.awt.GridLayout;
+import java.util.HashMap;
 import javax.swing.JButton;
-import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JTextField;
 
 /**
  * Valikko-luokka, jossa vastaaja täyttää vastaukset
@@ -22,11 +20,13 @@ public class KyselyValikko extends JPanel {
 
     private Kayttoliittyma kayttis;
     private Kysely kysely;
+    private HashMap kysymykset;
 
     public KyselyValikko(Kayttoliittyma kayttis, Kysely kysely) {
         super(new GridLayout(kysely.getKoko()+3, 2, 10,10));
         this.kayttis = kayttis;
         this.kysely = kysely;
+        this.kysymykset=kysely.getKysymykset();
         luoKomponentit();
     }
 
@@ -48,11 +48,12 @@ public class KyselyValikko extends JPanel {
             } else if (kysymys.getTyyppi()==Vastaustyyppi.LIKERT){
                 add(new LikertVastausKentta(kysymys));
             }
-
         }
         
-        JButton painike = new JButton("Seuraava kysmys");
         
+        
+        
+        JButton painike = new JButton("Tallenna");
 
         
 
