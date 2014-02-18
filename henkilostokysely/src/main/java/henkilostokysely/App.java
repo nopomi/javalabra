@@ -1,29 +1,7 @@
 package henkilostokysely;
 
-import com.sun.corba.se.impl.orbutil.graph.Graph;
-import edu.uci.ics.jung.algorithms.importance.BetweennessCentrality;
-import edu.uci.ics.jung.algorithms.layout.CircleLayout;
-import edu.uci.ics.jung.graph.SparseMultigraph;
-import edu.uci.ics.jung.graph.util.EdgeType;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
-import henkilostokysely.domain.Kysely;
-import henkilostokysely.domain.Kysymys;
-import henkilostokysely.domain.Vastaaja;
-import henkilostokysely.domain.Vastaustyyppi;
-import henkilostokysely.tallennus.VastaustenTallentaja;
-import java.awt.Dimension;
-import javax.swing.JFrame;
-import edu.uci.ics.jung.visualization.VisualizationImageServer;
-import edu.uci.ics.jung.graph.DirectedSparseGraph;
 import henkilostokysely.domain.Kyselysailio;
 import henkilostokysely.gui.Kayttoliittyma;
-import henkilostokysely.sna.Kaavio;
-import henkilostokysely.sna.Linkki;
-import henkilostokysely.sna.Noodi;
 import javax.swing.SwingUtilities;
 
 /**

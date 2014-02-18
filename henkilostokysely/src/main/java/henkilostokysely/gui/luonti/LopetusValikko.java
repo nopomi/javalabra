@@ -22,7 +22,6 @@ public class LopetusValikko extends JPanel{
         this.kayttis=kayttis;
         luoKomponentit();
         
-        
     }
     
     private void luoKomponentit(){

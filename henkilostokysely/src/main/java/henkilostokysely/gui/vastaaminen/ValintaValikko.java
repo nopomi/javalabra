@@ -33,8 +33,8 @@ public class ValintaValikko extends JPanel {
     public ValintaValikko(Kayttoliittyma kayttis, Vastaaja vastaaja) {
         super(new GridLayout(3, 3, 10, 10));
         this.kayttis = kayttis;
-        this.vastaaja=vastaaja;
-        this.kyselyt=new String[10];
+        this.vastaaja = vastaaja;
+        this.kyselyt = new String[10];
         luoKomponentit();
     }
 
@@ -45,27 +45,27 @@ public class ValintaValikko extends JPanel {
 
         int i = 0;
         for (Object o : kayttis.getSailio().getKyselyt().keySet()) {
-            String nimi = (String)o;
-            kyselyt[i]=nimi;
+            String nimi = (String) o;
+            kyselyt[i] = nimi;
             i++;
         }
-        
+
         JList nimiLista = new JList(kyselyt);
         nimiLista.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         nimiLista.setLayoutOrientation(JList.HORIZONTAL_WRAP);
         nimiLista.setVisibleRowCount(-1);
         JScrollPane listanScrollaaja = new JScrollPane(nimiLista);
-        listanScrollaaja.setPreferredSize(new Dimension(250,80));
-        
+        listanScrollaaja.setPreferredSize(new Dimension(250, 80));
+
         JLabel tyhja3 = new JLabel("");
         JButton valintaPainike = new JButton("Valitse");
         JLabel tyhja4 = new JLabel("");
-        
+
         ValintaValikkoKuuntelija kuuntelija = new ValintaValikkoKuuntelija(
                 this, nimiLista, valintaPainike, kyselyt);
-        
+
         valintaPainike.addActionListener(kuuntelija);
-        
+
 
         add(tyhja);
         add(valintaKehotus);
@@ -74,22 +74,22 @@ public class ValintaValikko extends JPanel {
         add(tyhja3);
         add(valintaPainike);
         add(tyhja4);
-        
+
 
     }
-    
-    
-    public void vaihdaValikko(Valikko vaihdettava){
+
+    public void vaihdaValikko(Valikko vaihdettava) {
         kayttis.vaihdaValikko(vaihdettava);
     }
-    
-    public void vaihdaValikko(Valikko vaihettava, int kyselyIndeksi){
-        Kysely valittuKysely = (Kysely)kayttis.getSailio().getKyselyt().get(kyselyt[kyselyIndeksi]);
-        KyselyValikko kyselyValikko = new KyselyValikko(kayttis, valittuKysely);
+
+    public void vaihdaValikko(Valikko vaihettava, int kyselyIndeksi) {
+        Kysely valittuKysely = (Kysely) kayttis.getSailio().getKyselyt().get(kyselyt[kyselyIndeksi]);
+        KyselyValikko kyselyValikko = new KyselyValikko(kayttis, vastaaja, valittuKysely);
         kayttis.lisaaValikko(Valikko.VASTAAJAKYSELY, kyselyValikko);
+        kayttis.vaihdaValikko(vaihettava);
     }
-    
-    public Kysely getKysely(String avain){
+
+    public Kysely getKysely(String avain) {
         return kayttis.getSailio().getKysely(avain);
     }
 }

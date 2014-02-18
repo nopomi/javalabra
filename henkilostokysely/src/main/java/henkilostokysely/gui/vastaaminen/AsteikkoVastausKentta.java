@@ -19,6 +19,7 @@ import javax.swing.JPanel;
 public class AsteikkoVastausKentta extends JPanel implements VastausKentta{
     private Kysymys kysymys;
     private String[] vaihtoehdot = {"1", "2", "3", "4", "5"};
+    private JComboBox vastaus;
     
     public AsteikkoVastausKentta(Kysymys kysymys){
         super(new GridLayout(1,2));
@@ -28,12 +29,12 @@ public class AsteikkoVastausKentta extends JPanel implements VastausKentta{
 
     private void luoKomponentit() {
         add(new JLabel(kysymys.getKysymys()));
-        JComboBox vastaus = new JComboBox(vaihtoehdot);
+        vastaus = new JComboBox(vaihtoehdot);
         add(vastaus);
     }
 
     @Override
     public String getVastaus() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return vastaus.getSelectedIndex()+1+"";
     }
 }

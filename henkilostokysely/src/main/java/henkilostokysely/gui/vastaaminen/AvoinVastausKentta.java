@@ -8,7 +8,9 @@ package henkilostokysely.gui.vastaaminen;
 
 import henkilostokysely.domain.Kysymys;
 import java.awt.GridLayout;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
 
 /**
  *
@@ -16,15 +18,24 @@ import javax.swing.JPanel;
  */
 public class AvoinVastausKentta extends JPanel implements VastausKentta{
     private Kysymys kysymys;
+    private JTextArea vastaus;
     
     public AvoinVastausKentta(Kysymys kysymys){
         super(new GridLayout(1,2));
         this.kysymys=kysymys;
+        luoKomponentit();
+    }
+    
+    private void luoKomponentit(){
+        this.vastaus=new JTextArea();
+        JLabel kysymysLabel = new JLabel(kysymys.getKysymys());
+        add(kysymysLabel);
+        add(vastaus);
     }
 
     @Override
     public String getVastaus() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return this.vastaus.getText();
     }
     
 }

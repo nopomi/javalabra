@@ -3,26 +3,40 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package henkilostokysely.gui.vastaaminen;
 
 import henkilostokysely.domain.Kysymys;
-import java.awt.PopupMenu;
+import java.awt.GridLayout;
+import javax.swing.JComboBox;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 /**
  *
  * @author mnoponen@cs
  */
-class LikertVastausKentta extends JPanel implements VastausKentta{
+class LikertVastausKentta extends JPanel implements VastausKentta {
 
-    public LikertVastausKentta(Kysymys kysymys){
-        
+    private Kysymys kysymys;
+    private String[] vaihtoehdot = {"Samaa mieltä", "Osittain samaa mieltä",
+        "Ei samaa eikä eri mieltä", "Osittain eri mieltä", "Eri mieltä"};
+    private JComboBox vastaus;
+
+    public LikertVastausKentta(Kysymys kysymys) {
+        super(new GridLayout(1, 2));
+        this.kysymys = kysymys;
+        luoKomponentit();
+    }
+
+    private void luoKomponentit() {
+        add(new JLabel(kysymys.getKysymys()));
+        vastaus = new JComboBox(vaihtoehdot);
+        add(vastaus);
+
     }
 
     @Override
     public String getVastaus() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return vastaus.getSelectedIndex() + 1 + "";
     }
-    
 }
