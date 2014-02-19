@@ -122,6 +122,10 @@ public class Kayttoliittyma implements Runnable {
         valikot.put(valikko, paneeli);
         frame.getContentPane().add(paneeli);
     }
+    
+    public void poistaValikko(Valikko poistettava){
+        valikot.remove(poistettava);
+    }
 
     
     

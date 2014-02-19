@@ -6,6 +6,7 @@ package henkilostokysely.gui.analysointi;
 
 import henkilostokysely.domain.Kysely;
 import henkilostokysely.domain.Kysymys;
+import henkilostokysely.domain.Vastaustyyppi;
 import henkilostokysely.gui.Kayttoliittyma;
 import java.awt.Dimension;
 import java.awt.GridLayout;
@@ -60,7 +61,7 @@ public class KysymysValintaValikko extends JPanel{
         JLabel tyhja4 = new JLabel("");
 
         KysymysValintaKuuntelija kuuntelija = new KysymysValintaKuuntelija(
-                this, kysymysLista, valintaPainike, kysymykset);
+                this, kysymysLista, valintaPainike);
 
         valintaPainike.addActionListener(kuuntelija);
 
@@ -72,6 +73,25 @@ public class KysymysValintaValikko extends JPanel{
         add(tyhja3);
         add(valintaPainike);
         add(tyhja4);
+    }
+    
+    public void vaihdaValikko(int valintaIndeksi){
+        
+        Kysymys valittuKysymys = (Kysymys) kysymykset.get(valintaIndeksi+1);
+        
+        
+        
+        if(valittuKysymys.getTyyppi()==Vastaustyyppi.ASTEIKKO){
+            //luo TilastoValikko
+        } else if(valittuKysymys.getTyyppi()==Vastaustyyppi.AVOIN){
+            //luo AvoinValikko
+        } else if(valittuKysymys.getTyyppi()==Vastaustyyppi.KOLMIKENTTA){
+            SNAValikko snaValikko = new SNAValikko(kayttis, valittuKysymys);
+            
+        } else if(valittuKysymys.getTyyppi()==Vastaustyyppi.LIKERT){
+            //luo LikertValikko
+        }
+        
     }
     
 }

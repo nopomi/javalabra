@@ -16,7 +16,7 @@ public class TiedostonPurkaja {
      *
      * @param tiedostoNimi
      */
-    public static Kaavio puraVastauksetKaavioksi(String tiedostoNimi){
+    public Kaavio puraVastauksetKaavioksi(String tiedostoNimi){
         
         Kaavio kaavio = new Kaavio();
         BufferedReader br = null;

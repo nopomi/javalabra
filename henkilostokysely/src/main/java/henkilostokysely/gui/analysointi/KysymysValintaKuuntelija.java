@@ -14,19 +14,18 @@ import javax.swing.JList;
  *
  * @author Miska
  */
-public class KysymysValintaKuuntelija implements ActionListener{
+public class KysymysValintaKuuntelija implements ActionListener {
 
-private KyselyValintaValikko valikko;
+    private KysymysValintaValikko valikko;
     private JList kyselyValikko;
     private JButton valintaPainike;
-    private String[] nimet;
+    private String[] kysymystekstit;
 
-    public KysymysValintaKuuntelija(KyselyValintaValikko valikko, JList lista,
-            JButton valintaPainike, String[] nimet) {
+    public KysymysValintaKuuntelija(KysymysValintaValikko valikko, JList lista,
+            JButton valintaPainike) {
         this.valikko = valikko;
         this.kyselyValikko = lista;
         this.valintaPainike = valintaPainike;
-        this.nimet = nimet;
 
     }
 
@@ -39,10 +38,7 @@ private KyselyValintaValikko valikko;
                 return;
             }
 
-            valikko.vaihdaValikko(Valikko.ANALYSOINTIKYSYMYS, valintaIndeksi);
+            valikko.vaihdaValikko(valintaIndeksi);
         }
     }
-    
-    
-    
 }
