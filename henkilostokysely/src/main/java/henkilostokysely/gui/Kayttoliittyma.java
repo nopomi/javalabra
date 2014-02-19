@@ -1,6 +1,7 @@
 package henkilostokysely.gui;
 
 import henkilostokysely.domain.Kyselysailio;
+import henkilostokysely.gui.analysointi.TunnistusValikko;
 import henkilostokysely.gui.luonti.NimiValikko;
 import henkilostokysely.gui.luonti.LopetusValikko;
 import henkilostokysely.gui.vastaaminen.KiitosValikko;
@@ -59,6 +60,8 @@ public class Kayttoliittyma implements Runnable {
         LopetusValikko luontilopetus = new LopetusValikko(this);
         TietoValikko vastaajatieto = new TietoValikko(this);
         KiitosValikko vastaajakiitos = new KiitosValikko(this);
+        TunnistusValikko analysointitieto = new TunnistusValikko(this);
+        
    
         //tähän tulee kaikkien valikkojen luominen
 
@@ -67,6 +70,7 @@ public class Kayttoliittyma implements Runnable {
         valikot.put(Valikko.LUONTILOPETUS, luontilopetus);
         valikot.put(Valikko.VASTAAJATIETO, vastaajatieto);
         valikot.put(Valikko.VASTAAJAKIITOS, vastaajakiitos);
+        valikot.put(Valikko.ANALYSOINTITIETO, analysointitieto);
         
         
                 
@@ -76,6 +80,7 @@ public class Kayttoliittyma implements Runnable {
         luontilopetus.setVisible(false);
         vastaajatieto.setVisible(false);
         vastaajakiitos.setVisible(false);
+        analysointitieto.equals(false);
         
         
         setAktiivinen(aloitusvalikko);
@@ -86,6 +91,7 @@ public class Kayttoliittyma implements Runnable {
         container.add(luontilopetus);
         container.add(vastaajatieto);
         container.add(vastaajakiitos);
+        container.add(analysointitieto);
         //tähän tulee kaikkien valikkojen lisääminen käyttöliittymään
 
     }
