@@ -4,9 +4,7 @@
  */
 package henkilostokysely.gui.analysointi;
 
-import henkilostokysely.domain.Vastaaja;
 import henkilostokysely.gui.Valikko;
-import henkilostokysely.gui.vastaaminen.TietoValikko;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;

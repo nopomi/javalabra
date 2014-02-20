@@ -6,7 +6,6 @@ import henkilostokysely.domain.Vastaaja;
 import henkilostokysely.domain.Vastaustyyppi;
 import henkilostokysely.gui.Kayttoliittyma;
 import henkilostokysely.gui.Valikko;
-import henkilostokysely.gui.luonti.NimiValikkoKuuntelija;
 import java.awt.GridLayout;
 import java.util.HashMap;
 import javax.swing.JButton;

@@ -2,11 +2,10 @@ package henkilostokysely.gui;
 
 import henkilostokysely.domain.Kyselysailio;
 import henkilostokysely.gui.analysointi.TunnistusValikko;
-import henkilostokysely.gui.luonti.NimiValikko;
 import henkilostokysely.gui.luonti.LopetusValikko;
+import henkilostokysely.gui.luonti.NimiValikko;
 import henkilostokysely.gui.vastaaminen.KiitosValikko;
 import henkilostokysely.gui.vastaaminen.TietoValikko;
-import henkilostokysely.gui.vastaaminen.ValintaValikko;
 import java.awt.Container;
 import java.awt.Dimension;
 import java.util.HashMap;
@@ -80,7 +79,7 @@ public class Kayttoliittyma implements Runnable {
         luontilopetus.setVisible(false);
         vastaajatieto.setVisible(false);
         vastaajakiitos.setVisible(false);
-        analysointitieto.equals(false);
+        analysointitieto.setVisible(false);
         
         
         setAktiivinen(aloitusvalikko);

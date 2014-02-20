@@ -7,11 +7,8 @@ package henkilostokysely.gui.analysointi;
 import henkilostokysely.domain.Kysely;
 import henkilostokysely.gui.Kayttoliittyma;
 import henkilostokysely.gui.Valikko;
-import henkilostokysely.gui.vastaaminen.KyselyValikko;
-import henkilostokysely.gui.vastaaminen.ValintaValikkoKuuntelija;
 import java.awt.Dimension;
 import java.awt.GridLayout;
-import java.util.HashMap;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JList;
@@ -59,7 +56,7 @@ public class KyselyValintaValikko extends JPanel {
         JLabel tyhja4 = new JLabel("");
 
         KyselyValintaKuuntelija kuuntelija = new KyselyValintaKuuntelija(
-                this, nimiLista, valintaPainike, kyselyt);
+                this, nimiLista, valintaPainike);
 
         valintaPainike.addActionListener(kuuntelija);
 

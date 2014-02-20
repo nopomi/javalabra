@@ -20,14 +20,12 @@ public class KyselyValintaKuuntelija implements ActionListener {
     private KyselyValintaValikko valikko;
     private JList kyselyValikko;
     private JButton valintaPainike;
-    private String[] nimet;
 
     public KyselyValintaKuuntelija(KyselyValintaValikko valikko, JList lista,
-            JButton valintaPainike, String[] nimet) {
+            JButton valintaPainike) {
         this.valikko = valikko;
         this.kyselyValikko = lista;
         this.valintaPainike = valintaPainike;
-        this.nimet = nimet;
 
     }
 

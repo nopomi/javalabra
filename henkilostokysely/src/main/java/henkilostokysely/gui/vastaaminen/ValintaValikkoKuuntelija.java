@@ -4,13 +4,11 @@
  */
 package henkilostokysely.gui.vastaaminen;
 
-import henkilostokysely.domain.Kysely;
 import henkilostokysely.gui.Valikko;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JList;
-import javax.swing.JScrollPane;
 
 /**
  *

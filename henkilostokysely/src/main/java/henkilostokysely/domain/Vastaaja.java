@@ -2,8 +2,6 @@
 
 package henkilostokysely.domain;
 
-import java.util.ArrayList;
-
 
 /**
  *

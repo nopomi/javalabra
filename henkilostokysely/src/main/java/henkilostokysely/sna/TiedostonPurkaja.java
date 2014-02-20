@@ -31,7 +31,7 @@ public class TiedostonPurkaja {
                 Noodi testiNoodi = new Noodi(Integer.parseInt(vastaukset[0]));
                 Noodi lahde = kaavio.lisaaNoodi(testiNoodi);
                 
-                for (int i = 1; i <= vastaukset.length; i++) {
+                for (int i = 1; i < vastaukset.length; i++) {
                     Noodi testiKohde = new Noodi(Integer.parseInt(vastaukset[i]));
                     Noodi kohde = kaavio.lisaaNoodi(testiKohde);
                     kaavio.lisaaLinkki(lahde, kohde);

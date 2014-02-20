@@ -3,7 +3,6 @@ package henkilostokysely.gui.vastaaminen;
 
 import henkilostokysely.gui.Kayttoliittyma;
 import henkilostokysely.gui.Valikko;
-import henkilostokysely.gui.luonti.LopetusValikkoKuuntelija;
 import java.awt.GridLayout;
 import javax.swing.JButton;
 import javax.swing.JLabel;

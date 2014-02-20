@@ -36,7 +36,7 @@ public class TietoValikkoKuuntelija implements ActionListener {
 
         if (e.getSource() == tallennuspainike) {
             String henkilonNimi = nimiKentta.getText();
-            int henkilonNumero = 0;
+            int henkilonNumero;
             henkilonNumero = Integer.parseInt(henkilostonumeroKentta.getText());
             Vastaaja vastaaja = new Vastaaja(henkilonNumero, henkilonNimi);
             valikko.vaihdaValikko(Valikko.VASTAAJAVALINTA, vastaaja);

@@ -8,6 +8,7 @@ import henkilostokysely.domain.Kysely;
 import henkilostokysely.domain.Kysymys;
 import henkilostokysely.domain.Vastaustyyppi;
 import henkilostokysely.gui.Kayttoliittyma;
+import henkilostokysely.gui.Valikko;
 import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.util.HashMap;
@@ -79,15 +80,14 @@ public class KysymysValintaValikko extends JPanel{
         
         Kysymys valittuKysymys = (Kysymys) kysymykset.get(valintaIndeksi+1);
         
-        
-        
         if(valittuKysymys.getTyyppi()==Vastaustyyppi.ASTEIKKO){
             //luo TilastoValikko
         } else if(valittuKysymys.getTyyppi()==Vastaustyyppi.AVOIN){
             //luo AvoinValikko
         } else if(valittuKysymys.getTyyppi()==Vastaustyyppi.KOLMIKENTTA){
             SNAValikko snaValikko = new SNAValikko(kayttis, valittuKysymys);
-            
+            kayttis.lisaaValikko(Valikko.ANALYSOINTISNA, snaValikko);
+            kayttis.vaihdaValikko(Valikko.ANALYSOINTISNA);
         } else if(valittuKysymys.getTyyppi()==Vastaustyyppi.LIKERT){
             //luo LikertValikko
         }

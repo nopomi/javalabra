@@ -6,7 +6,6 @@ package henkilostokysely.gui.analysointi;
 
 import henkilostokysely.gui.Kayttoliittyma;
 import henkilostokysely.gui.Valikko;
-import henkilostokysely.gui.vastaaminen.TietoValikkoKuuntelija;
 import java.awt.GridLayout;
 import javax.swing.JButton;
 import javax.swing.JLabel;
