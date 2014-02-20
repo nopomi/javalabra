@@ -42,7 +42,6 @@ public class TietoValikkoKuuntelija implements ActionListener {
             henkilostonumeroKentta.setText("");
             Vastaaja vastaaja = new Vastaaja(henkilonNumero, henkilonNimi);
             valikko.vaihdaValikko(Valikko.VASTAAJAVALINTA, vastaaja);
-
         }
     }
 }
