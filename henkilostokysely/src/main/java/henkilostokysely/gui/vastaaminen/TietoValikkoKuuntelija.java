@@ -38,6 +38,8 @@ public class TietoValikkoKuuntelija implements ActionListener {
             String henkilonNimi = nimiKentta.getText();
             int henkilonNumero;
             henkilonNumero = Integer.parseInt(henkilostonumeroKentta.getText());
+            nimiKentta.setText("");
+            henkilostonumeroKentta.setText("");
             Vastaaja vastaaja = new Vastaaja(henkilonNumero, henkilonNimi);
             valikko.vaihdaValikko(Valikko.VASTAAJAVALINTA, vastaaja);
 
