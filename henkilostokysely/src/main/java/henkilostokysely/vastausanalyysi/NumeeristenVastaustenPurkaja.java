@@ -1,24 +1,26 @@
-
-package henkilostokysely.sna;
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package henkilostokysely.vastausanalyysi;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-
+import java.util.ArrayList;
 
 /**
- * Luokka lukee csv-tiedostoja ja purkaa ne kaavioiksi.
+ *
  * @author Miska
+ * Toistaiseksi epäselvä, tulee jonkin sortin rakenne joka purkaa
+ * numeerista vastausdataa tilastoiksi ja ilmoittaa ne käyttöliittymälle
+ * 
  */
-public class TiedostonPurkaja {
+public class NumeeristenVastaustenPurkaja {
     
     
-    /**
-     *
-     * @param tiedostoNimi
-     */
-    public Kaavio puraVastauksetKaavioksi(String tiedostoNimi){
+    public ArrayList puraVastauksetAineistoksi(String tiedostoNimi){
         
-        Kaavio kaavio = new Kaavio();
+        ArrayList<Integer> aineisto = new ArrayList<>();
         BufferedReader br = null;
         String line = "";
         String valiMerkki = ",";
@@ -27,14 +29,12 @@ public class TiedostonPurkaja {
             
             br = new BufferedReader(new FileReader(tiedostoNimi));
             while((line = br.readLine()) !=null){
-                String[] vastaukset = line.split(valiMerkki);
-                Noodi testiNoodi = new Noodi(Integer.parseInt(vastaukset[0]));
-                Noodi lahde = kaavio.lisaaNoodi(testiNoodi);
-                
-                for (int i = 1; i < vastaukset.length; i++) {
-                    Noodi testiKohde = new Noodi(Integer.parseInt(vastaukset[i]));
-                    Noodi kohde = kaavio.lisaaNoodi(testiKohde);
-                    kaavio.lisaaLinkki(lahde, kohde);
+                String[] vastaus = line.split(valiMerkki);
+               
+                try{
+                    aineisto.add(Integer.parseInt(vastaus[1]));
+                } catch (Exception e){
+                    System.out.println("Vastaus väärässä muodossa");
                 }
                 
             }
@@ -51,7 +51,7 @@ public class TiedostonPurkaja {
             }
         }
         
-        return kaavio;
+        return aineisto;
         
     }
     

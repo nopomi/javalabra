@@ -13,7 +13,7 @@ import henkilostokysely.gui.Valikko;
 import henkilostokysely.sna.Kaavio;
 import henkilostokysely.sna.Linkki;
 import henkilostokysely.sna.Noodi;
-import henkilostokysely.sna.TiedostonPurkaja;
+import henkilostokysely.sna.SNATiedostonPurkaja;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import javax.swing.JButton;
@@ -42,7 +42,7 @@ public class SNAValikko extends JPanel {
         JLabel kysymysLabel = new JLabel(kysymys.getKysymys());
         
        
-        TiedostonPurkaja purkaja = new TiedostonPurkaja();
+        SNATiedostonPurkaja purkaja = new SNATiedostonPurkaja();
         Kaavio kaavio = purkaja.puraVastauksetKaavioksi(kysymys.getIndeksi() + "_vastaukset.csv");
         DirectedSparseMultigraph<Noodi, Linkki> graph =
                 (DirectedSparseMultigraph<Noodi, Linkki>) kaavio.getKaavio();
@@ -59,6 +59,7 @@ public class SNAValikko extends JPanel {
         
         add(kysymysLabel);
         add(kaavioKuva);
+        add(takaisinPainike);
 
 
     }

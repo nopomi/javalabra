@@ -4,6 +4,7 @@
  */
 package henkilostokysely.gui.analysointi;
 
+import henkilostokysely.gui.Valikko;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
@@ -19,12 +20,14 @@ public class KysymysValintaKuuntelija implements ActionListener {
     private JList kyselyValikko;
     private JButton valintaPainike;
     private String[] kysymystekstit;
+    private JButton takaisinPainike;
 
     public KysymysValintaKuuntelija(KysymysValintaValikko valikko, JList lista,
-            JButton valintaPainike) {
+            JButton valintaPainike, JButton takaisinPainike) {
         this.valikko = valikko;
         this.kyselyValikko = lista;
         this.valintaPainike = valintaPainike;
+        this.takaisinPainike=takaisinPainike;
 
     }
 
@@ -38,6 +41,8 @@ public class KysymysValintaKuuntelija implements ActionListener {
             }
 
             valikko.vaihdaValikko(valintaIndeksi);
+        } else if(e.getSource()==takaisinPainike){
+            valikko.vaihdaValikko(Valikko.ALOITUS);
         }
     }
 }

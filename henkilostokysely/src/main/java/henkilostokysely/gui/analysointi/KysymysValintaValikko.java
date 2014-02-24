@@ -42,6 +42,7 @@ public class KysymysValintaValikko extends JPanel{
         JLabel tyhja = new JLabel("");
         JLabel valintaKehotus = new JLabel("Valitse kysymys:");
         JLabel tyhja2 = new JLabel("");
+        JButton takaisinPainike = new JButton("Päävalikkoon");
 
         int i = 0;
         for (Object o : kysymykset.values()) {
@@ -59,12 +60,12 @@ public class KysymysValintaValikko extends JPanel{
 
         JLabel tyhja3 = new JLabel("");
         JButton valintaPainike = new JButton("Valitse");
-        JLabel tyhja4 = new JLabel("");
 
         KysymysValintaKuuntelija kuuntelija = new KysymysValintaKuuntelija(
-                this, kysymysLista, valintaPainike);
+                this, kysymysLista, valintaPainike, takaisinPainike);
 
         valintaPainike.addActionListener(kuuntelija);
+        takaisinPainike.addActionListener(kuuntelija);
 
 
         add(tyhja);
@@ -73,7 +74,12 @@ public class KysymysValintaValikko extends JPanel{
         add(listanScrollaaja);
         add(tyhja3);
         add(valintaPainike);
-        add(tyhja4);
+        add(takaisinPainike);
+    }
+    
+    public void vaihdaValikko(Valikko vaihdettava){
+        kayttis.poistaValikko(Valikko.ANALYSOINTIKYSYMYS);
+        kayttis.vaihdaValikko(vaihdettava);
     }
     
     public void vaihdaValikko(int valintaIndeksi){
