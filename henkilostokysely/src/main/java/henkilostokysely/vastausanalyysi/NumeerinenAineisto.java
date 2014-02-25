@@ -1,3 +1,7 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package henkilostokysely.vastausanalyysi;
 
 import java.util.ArrayList;
@@ -7,11 +11,11 @@ import java.util.ArrayList;
  * @author Miska
  */
 public class NumeerinenAineisto {
-    
+
     private ArrayList<Integer> aineisto;
 
     public NumeerinenAineisto(ArrayList<Integer> aineisto) {
-        this.aineisto=aineisto;
+        this.aineisto = aineisto;
     }
 
     public double laskeKeskiarvo() {
@@ -38,37 +42,36 @@ public class NumeerinenAineisto {
         }
         return erotusneliosumma / aineisto.size();
     }
-    
-    public int[] likertJakauma(){
+
+    public int[] likertJakauma() {
         int[] jakaumat = new int[5];
         int ykkoset = 0;
         int kakkoset = 0;
         int kolmoset = 0;
         int neloset = 0;
         int vitoset = 0;
-        
+
         for (int arvo : this.aineisto) {
-            if (arvo==1) {
+            if (arvo == 1) {
                 ykkoset++;
-            } else if(arvo==2){
+            } else if (arvo == 2) {
                 kakkoset++;
-            } else if(arvo==3){
+            } else if (arvo == 3) {
                 kolmoset++;
-            } else if(arvo==4){
+            } else if (arvo == 4) {
                 neloset++;
-            } else if(arvo==5){
+            } else if (arvo == 5) {
                 vitoset++;
             }
         }
-        double summa = ykkoset+kakkoset+kolmoset+neloset+vitoset;
-        
-        jakaumat[0] = (int) (100*(1.0*ykkoset/summa));
-        jakaumat[1] = (int) (100*(1.0*kakkoset/summa));
-        jakaumat[2] = (int) (100*(1.0*kolmoset/summa));
-        jakaumat[3] = (int) (100*(1.0*neloset/summa));
-        jakaumat[4] = (int) (100*(1.0*vitoset/summa));
-        
+        double summa = ykkoset + kakkoset + kolmoset + neloset + vitoset;
+
+        jakaumat[0] = (int) (100 * (1.0 * ykkoset / summa));
+        jakaumat[1] = (int) (100 * (1.0 * kakkoset / summa));
+        jakaumat[2] = (int) (100 * (1.0 * kolmoset / summa));
+        jakaumat[3] = (int) (100 * (1.0 * neloset / summa));
+        jakaumat[4] = (int) (100 * (1.0 * vitoset / summa));
+
         return jakaumat;
-        
     }
 }

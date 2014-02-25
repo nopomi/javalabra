@@ -56,6 +56,5 @@ public class App {
         SwingUtilities.invokeLater(kayttoliittyma);
 
 
-
     }
 }

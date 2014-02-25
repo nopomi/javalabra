@@ -50,6 +50,7 @@ public class ValintaValikko extends JPanel {
         nimiLista.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         nimiLista.setLayoutOrientation(JList.HORIZONTAL_WRAP);
         nimiLista.setVisibleRowCount(-1);
+        
         JScrollPane listanScrollaaja = new JScrollPane(nimiLista);
         listanScrollaaja.setPreferredSize(new Dimension(250, 80));
 

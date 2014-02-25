@@ -28,6 +28,8 @@ public class AvoinVastausKentta extends JPanel implements VastausKentta{
     
     private void luoKomponentit(){
         this.vastaus=new JTextArea();
+        vastaus.setLineWrap(true);
+        vastaus.setWrapStyleWord(true);
         JLabel kysymysLabel = new JLabel(kysymys.getKysymys());
         add(kysymysLabel);
         add(vastaus);

@@ -23,18 +23,18 @@ import javax.swing.ListSelectionModel;
  * @see Valikko
  * @author Miska
  */
-public class KysymysValintaValikko extends JPanel{
-    
+public class KysymysValintaValikko extends JPanel {
+
     private Kayttoliittyma kayttis;
     private HashMap kysymykset;
     private String[] kysymystekstit;
 
     KysymysValintaValikko(Kayttoliittyma kayttis, Kysely valittuKysely) {
-        super(new GridLayout(3,3,10,10));
-        this.kayttis=kayttis;
-        this.kysymykset=valittuKysely.getKysymykset();
-        this.kysymystekstit=new String[20];
-        
+        super(new GridLayout(3, 3, 10, 10));
+        this.kayttis = kayttis;
+        this.kysymykset = valittuKysely.getKysymykset();
+        this.kysymystekstit = new String[20];
+
         luoKomponentit();
     }
 
@@ -47,7 +47,7 @@ public class KysymysValintaValikko extends JPanel{
         int i = 0;
         for (Object o : kysymykset.values()) {
             Kysymys kysymys = (Kysymys) o;
-            kysymystekstit[i] = kysymys.getKysymys()+" ("+kysymys.getTyyppi().toString()+")";
+            kysymystekstit[i] = kysymys.getKysymys() + " (" + kysymys.getTyyppi().toString() + ")";
             i++;
         }
 
@@ -76,28 +76,31 @@ public class KysymysValintaValikko extends JPanel{
         add(valintaPainike);
         add(takaisinPainike);
     }
-    
-    public void vaihdaValikko(Valikko vaihdettava){
+
+    public void vaihdaValikko(Valikko vaihdettava) {
         kayttis.poistaValikko(Valikko.ANALYSOINTIKYSYMYS);
         kayttis.vaihdaValikko(vaihdettava);
     }
-    
-    public void vaihdaValikko(int valintaIndeksi){
-        
-        Kysymys valittuKysymys = (Kysymys) kysymykset.get(valintaIndeksi+1);
-        
-        if(valittuKysymys.getTyyppi()==Vastaustyyppi.ASTEIKKO){
-            //luo TilastoValikko
-        } else if(valittuKysymys.getTyyppi()==Vastaustyyppi.AVOIN){
-            //luo AvoinValikko
-        } else if(valittuKysymys.getTyyppi()==Vastaustyyppi.KOLMIKENTTA){
+
+    public void vaihdaValikko(int valintaIndeksi) {
+
+        Kysymys valittuKysymys = (Kysymys) kysymykset.get(valintaIndeksi + 1);
+
+        if (valittuKysymys.getTyyppi() == Vastaustyyppi.ASTEIKKO) {
+            TilastoValikko tilastoValikko = new TilastoValikko(kayttis, valittuKysymys);
+            kayttis.lisaaValikko(Valikko.ANALYSOINTITILASTO, tilastoValikko);
+            kayttis.vaihdaValikko(Valikko.ANALYSOINTITILASTO);
+        } else if (valittuKysymys.getTyyppi() == Vastaustyyppi.AVOIN) {
+            AvoinValikko avoinValikko = new AvoinValikko(kayttis, valittuKysymys);
+            kayttis.lisaaValikko(Valikko.ANALYSOINTIAVOIN, avoinValikko);
+            kayttis.vaihdaValikko(Valikko.ANALYSOINTIAVOIN);
+        } else if (valittuKysymys.getTyyppi() == Vastaustyyppi.KOLMIKENTTA) {
             SNAValikko snaValikko = new SNAValikko(kayttis, valittuKysymys);
             kayttis.lisaaValikko(Valikko.ANALYSOINTISNA, snaValikko);
             kayttis.vaihdaValikko(Valikko.ANALYSOINTISNA);
-        } else if(valittuKysymys.getTyyppi()==Vastaustyyppi.LIKERT){
+        } else if (valittuKysymys.getTyyppi() == Vastaustyyppi.LIKERT) {
             //luo LikertValikko
         }
-        
+
     }
-    
 }
