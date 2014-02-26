@@ -10,6 +10,7 @@ import henkilostokysely.gui.Valikko;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 /**
@@ -21,13 +22,15 @@ public class TietoValikkoKuuntelija implements ActionListener {
     private TietoValikko valikko;
     private JTextField nimiKentta;
     private JTextField henkilostonumeroKentta;
+    private JLabel syotePalaute;
     private JButton tallennuspainike;
 
     public TietoValikkoKuuntelija(TietoValikko valikko, JTextField nimiKentta,
-            JTextField henkilostonumeroKentta, JButton tallennuspainike) {
+            JTextField henkilostonumeroKentta, JLabel syotePalaute, JButton tallennuspainike) {
         this.valikko = valikko;
         this.nimiKentta = nimiKentta;
         this.henkilostonumeroKentta = henkilostonumeroKentta;
+        this.syotePalaute = syotePalaute;
         this.tallennuspainike = tallennuspainike;
     }
 
@@ -35,9 +38,21 @@ public class TietoValikkoKuuntelija implements ActionListener {
     public void actionPerformed(ActionEvent e) {
 
         if (e.getSource() == tallennuspainike) {
+            if (nimiKentta.getText().matches(".*\\d.*")
+                    || nimiKentta.getText().isEmpty()) {
+                syotePalaute.setText("Syötä nimesi, ei numeroita!");
+                return;
+            }
+
+            if (!henkilostonumeroKentta.getText().matches("[0-9]+")
+                    || henkilostonumeroKentta.getText().isEmpty()) {
+                syotePalaute.setText("Syötä numero, ei kirjaimia!");
+                return;
+            }
             String henkilonNimi = nimiKentta.getText();
-            int henkilonNumero;
-            henkilonNumero = Integer.parseInt(henkilostonumeroKentta.getText());
+            int henkilonNumero = Integer.parseInt(
+                    henkilostonumeroKentta.getText());
+
             nimiKentta.setText("");
             henkilostonumeroKentta.setText("");
             Vastaaja vastaaja = new Vastaaja(henkilonNumero, henkilonNimi);

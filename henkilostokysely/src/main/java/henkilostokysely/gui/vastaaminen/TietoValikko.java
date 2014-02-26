@@ -29,14 +29,14 @@ public class TietoValikko extends JPanel {
     private void luoKomponentit() {
         JLabel tyhja = new JLabel("");
         JLabel tayttoKehotus = new JLabel("Syötä nimesi ja henkilöstönumerosi");
-        JLabel tyhja2 = new JLabel("");
+        JLabel syotePalaute = new JLabel("");
         JTextField nimiKentta = new JTextField();
         JTextField henkilostoNumeroKentta = new JTextField();
         JLabel tyhja3 = new JLabel("");
         JButton tallennuspainike = new JButton("Tallenna");
 
         TietoValikkoKuuntelija kuuntelija = new TietoValikkoKuuntelija(this, nimiKentta,
-                henkilostoNumeroKentta, tallennuspainike);
+                henkilostoNumeroKentta, syotePalaute, tallennuspainike);
 
         nimiKentta.addActionListener(kuuntelija);
         henkilostoNumeroKentta.addActionListener(kuuntelija);
@@ -45,7 +45,7 @@ public class TietoValikko extends JPanel {
 
         add(tyhja);
         add(tayttoKehotus);
-        add(tyhja2);
+        add(syotePalaute);
         add(nimiKentta);
         add(henkilostoNumeroKentta);
         add(tyhja3);
