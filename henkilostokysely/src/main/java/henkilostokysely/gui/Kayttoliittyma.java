@@ -60,9 +60,6 @@ public class Kayttoliittyma implements Runnable {
         TietoValikko vastaajatieto = new TietoValikko(this);
         KiitosValikko vastaajakiitos = new KiitosValikko(this);
         TunnistusValikko analysointitieto = new TunnistusValikko(this);
-        
-   
-        //tähän tulee kaikkien valikkojen luominen
 
         valikot.put(Valikko.ALOITUS, aloitusvalikko);
         valikot.put(Valikko.LUONTINIMI, luontinimi);
@@ -71,8 +68,6 @@ public class Kayttoliittyma implements Runnable {
         valikot.put(Valikko.VASTAAJAKIITOS, vastaajakiitos);
         valikot.put(Valikko.ANALYSOINTITIETO, analysointitieto);
         
-        
-                
 
         aloitusvalikko.setVisible(true);
         luontinimi.setVisible(false);
@@ -81,9 +76,7 @@ public class Kayttoliittyma implements Runnable {
         vastaajakiitos.setVisible(false);
         analysointitieto.setVisible(false);
         
-        
         setAktiivinen(aloitusvalikko);
-
 
         container.add(aloitusvalikko);
         container.add(luontinimi);
@@ -91,8 +84,6 @@ public class Kayttoliittyma implements Runnable {
         container.add(vastaajatieto);
         container.add(vastaajakiitos);
         container.add(analysointitieto);
-        //tähän tulee kaikkien valikkojen lisääminen käyttöliittymään
-
     }
 
     /**

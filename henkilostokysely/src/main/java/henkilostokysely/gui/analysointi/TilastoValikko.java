@@ -12,6 +12,7 @@ import henkilostokysely.vastausanalyysi.NumeeristenVastaustenPurkaja;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.util.ArrayList;
+import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -28,13 +29,16 @@ public class TilastoValikko extends JPanel {
     private Kysymys valittuKysymys;
 
     public TilastoValikko(Kayttoliittyma kayttis, Kysymys valittuKysymys) {
-        super(new GridLayout(10, 1));
+        super();
         this.kayttis = kayttis;
         this.valittuKysymys = valittuKysymys;
         luoKomponentit();
     }
 
+    
     private void luoKomponentit() {
+        
+        this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
         NumeeristenVastaustenPurkaja purkaja = new NumeeristenVastaustenPurkaja();
         ArrayList<Integer> data = purkaja.puraVastauksetAineistoksi(
@@ -45,9 +49,10 @@ public class TilastoValikko extends JPanel {
 
         String[] sarakkeidenNimet = {"Keskiarvo", "Keskihajonta", "Varianssi"};
         Double[][] nayttoData = new Double[1][3];
-        nayttoData[1][1] = aineisto.laskeKeskiarvo();
-        nayttoData[1][2] = aineisto.laskeKeskihajonta();
-        nayttoData[1][3] = aineisto.laskeVarianssi();
+        nayttoData[0][0] = aineisto.laskeKeskiarvo();
+        nayttoData[0][1] = aineisto.laskeKeskihajonta();
+        nayttoData[0][2] = aineisto.laskeVarianssi();
+        
         JTable taulukko = new JTable(nayttoData, sarakkeidenNimet);
         
         JButton takaisinPainike = new JButton("Takaisin");

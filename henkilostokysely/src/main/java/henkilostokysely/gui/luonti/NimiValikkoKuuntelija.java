@@ -13,16 +13,18 @@ import javax.swing.*;
 
 /**
  * Kuuntelija-luokka joka liittyy nimivalikkoon
+ *
  * @author Miska
  * @see NimiValikko
  */
-public class NimiValikkoKuuntelija implements ActionListener{
-    
+public class NimiValikkoKuuntelija implements ActionListener {
+
     private NimiValikko valikko;
     private JButton tallennuspainike;
     private JTextField tekstikentta;
+    private JLabel syoteKehotus;
     private Kyselysailio sailio;
-    
+
     /**
      *
      * @param valikko
@@ -30,21 +32,27 @@ public class NimiValikkoKuuntelija implements ActionListener{
      * @param tallennuspainike
      * @param sailio
      */
-    public NimiValikkoKuuntelija(NimiValikko valikko, JTextField tekstikentta, 
-            JButton tallennuspainike, Kyselysailio sailio){
-        this.tallennuspainike=tallennuspainike;
-        this.tekstikentta=tekstikentta;
-        this.valikko=valikko;
-        this.sailio=sailio;
+    public NimiValikkoKuuntelija(NimiValikko valikko, JTextField tekstikentta,
+            JButton tallennuspainike, JLabel syoteLabel, Kyselysailio sailio) {
+        this.tallennuspainike = tallennuspainike;
+        this.tekstikentta = tekstikentta;
+        this.valikko = valikko;
+        this.syoteKehotus = syoteLabel;
+        this.sailio = sailio;
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        String kyselynNimi = this.tekstikentta.getText();
-        Kysely uusiKysely = sailio.luoKysely(kyselynNimi);
-        valikko.vaihdaValikko(Valikko.LUONTIKYSYMYKSET, uusiKysely);
-        tekstikentta.setText("");
-        
+        if ("".equals(this.tekstikentta.getText())) {
+            syoteKehotus.setText("Anna kyselylylle nimi!");
+
+        }
+        if (!"".equals(this.tekstikentta.getText())) {
+            String kyselynNimi = this.tekstikentta.getText();
+            Kysely uusiKysely = sailio.luoKysely(kyselynNimi);
+            valikko.vaihdaValikko(Valikko.LUONTIKYSYMYKSET, uusiKysely);
+            tekstikentta.setText("");
+        }
+
     }
-    
 }

@@ -44,6 +44,7 @@ public class KysymysValikkoKuuntelija implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         Vastaustyyppi tyyppi = null;
         String kysymysTekstina = kysymys.getText();
+
         int tyyppiIndeksi = vastaustyyppi.getSelectedIndex();
 
         if (tyyppiIndeksi == 0) {
@@ -61,10 +62,19 @@ public class KysymysValikkoKuuntelija implements ActionListener {
             if (!kysymysTekstina.isEmpty()) {
                 valikko.lisaaKysymys(kysymysTekstina, tyyppi);
             }
+            
+            if(valikko.annaKyselynKoko()==0){
+                lisaystieto.setText("Lisää ensin kysymys!");
+                return;
+            }
             valikko.vaihdaValikko(Valikko.LUONTILOPETUS);
 
         }
         if (e.getSource() == lisaa) {
+            if (kysymysTekstina.isEmpty()) {
+                lisaystieto.setText("Täytä kysymys!");
+                return;
+            }
             valikko.lisaaKysymys(kysymysTekstina, tyyppi);
             lisaystieto.setText("Lisätty! Kysymyksiä: " + valikko.annaKyselynKoko());
             kysymys.setText("");

@@ -99,7 +99,9 @@ public class KysymysValintaValikko extends JPanel {
             kayttis.lisaaValikko(Valikko.ANALYSOINTISNA, snaValikko);
             kayttis.vaihdaValikko(Valikko.ANALYSOINTISNA);
         } else if (valittuKysymys.getTyyppi() == Vastaustyyppi.LIKERT) {
-            //luo LikertValikko
+            LikertValikko likertValikko = new LikertValikko(kayttis, valittuKysymys);
+            kayttis.lisaaValikko(Valikko.ANALYSOINTILIKERT, likertValikko);
+            kayttis.vaihdaValikko(Valikko.ANALYSOINTILIKERT);
         }
 
     }

@@ -31,16 +31,17 @@ public class NimiValikko extends JPanel {
         JLabel annaNimi = new JLabel("Kyselyn nimi:");
         JTextField tekstiKentta = new JTextField();
         JButton tallennuspainike = new JButton("Luo");
+        JLabel syoteLabel = new JLabel("");
         
         
         NimiValikkoKuuntelija kuuntelija = new NimiValikkoKuuntelija(
-                this, tekstiKentta, tallennuspainike, kayttis.getSailio());
+                this, tekstiKentta, tallennuspainike, syoteLabel, kayttis.getSailio());
         
         tekstiKentta.addActionListener(kuuntelija);
         tallennuspainike.addActionListener(kuuntelija);
         
         add(new JLabel(""));
-        add(new JLabel(""));
+        add(syoteLabel);
         add(new JLabel(""));
         add(annaNimi);
         add(tekstiKentta);
