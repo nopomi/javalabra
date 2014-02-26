@@ -38,8 +38,8 @@ public class TunnistusValikkoKuuntelija implements ActionListener{
             char[] tunnusluku = new char[10];
             tunnusluku = tunnuslukuKentta.getPassword();
             
-            //tähän tulee joku huikea tunnusluvuntunnistustoiminto jos jää
-            //aikaa sen tekemiseen
+            //tähän voidaan kehittää joku huikea tunnistustoiminto
+            //jos päätetään kehittää sovellusta edelleen.
             
             valikko.vaihdaValikko(Valikko.ANALYSOINTIKYSELY);
 

@@ -1,6 +1,6 @@
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * 
+ * 
  */
 package henkilostokysely.gui.vastaaminen;
 
@@ -21,16 +21,13 @@ public class ValintaValikkoKuuntelija implements ActionListener {
     private JList kyselyValikko;
     private JButton valintaPainike;
     private JLabel syotePalaute;
-    private String[] nimet;
 
     public ValintaValikkoKuuntelija(ValintaValikko valikko, JList lista,
-            JButton valintaPainike, JLabel syotePalaute, String[] nimet) {
+            JButton valintaPainike, JLabel syotePalaute) {
         this.valikko = valikko;
         this.kyselyValikko = lista;
         this.valintaPainike = valintaPainike;
         this.syotePalaute = syotePalaute;
-        this.nimet = nimet;
-
     }
 
     @Override

@@ -60,7 +60,7 @@ public class ValintaValikko extends JPanel {
         JLabel tyhja4 = new JLabel("");
 
         ValintaValikkoKuuntelija kuuntelija = new ValintaValikkoKuuntelija(
-                this, nimiLista, valintaPainike, syotePalaute, kyselyt);
+                this, nimiLista, valintaPainike, syotePalaute);
         valintaPainike.addActionListener(kuuntelija);
 
         add(tyhja);

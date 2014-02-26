@@ -9,6 +9,7 @@ import henkilostokysely.gui.vastaaminen.ValintaValikko;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JList;
 
 /**
@@ -20,11 +21,13 @@ public class KyselyValintaKuuntelija implements ActionListener {
     private KyselyValintaValikko valikko;
     private JList kyselyValikko;
     private JButton valintaPainike;
+    private JLabel syotePalaute;
 
     public KyselyValintaKuuntelija(KyselyValintaValikko valikko, JList lista,
-            JButton valintaPainike) {
+            JLabel syotePalaute, JButton valintaPainike) {
         this.valikko = valikko;
         this.kyselyValikko = lista;
+        this.syotePalaute = syotePalaute;
         this.valintaPainike = valintaPainike;
 
     }
@@ -34,10 +37,11 @@ public class KyselyValintaKuuntelija implements ActionListener {
         if (e.getSource() == valintaPainike) {
             int valintaIndeksi;
             valintaIndeksi = kyselyValikko.getSelectedIndex();
-            if (valintaIndeksi == -1) {
+            if (kyselyValikko.isSelectionEmpty() ||
+                    valintaIndeksi >= valikko.getSailio().getKyselyt().size()) {
+                syotePalaute.setText("Valitse kysely!");
                 return;
             }
-
             valikko.vaihdaValikko(Valikko.ANALYSOINTIKYSYMYS, valintaIndeksi);
         }
     }

@@ -5,6 +5,7 @@
 package henkilostokysely.gui.analysointi;
 
 import henkilostokysely.domain.Kysely;
+import henkilostokysely.domain.Kyselysailio;
 import henkilostokysely.gui.Kayttoliittyma;
 import henkilostokysely.gui.Valikko;
 import java.awt.Dimension;
@@ -35,7 +36,7 @@ public class KyselyValintaValikko extends JPanel {
     private void luoKomponentit() {
         JLabel tyhja = new JLabel("");
         JLabel valintaKehotus = new JLabel("Valitse kysely:");
-        JLabel tyhja2 = new JLabel("");
+        JLabel syotePalaute = new JLabel("");
 
         int i = 0;
         for (Object o : kayttis.getSailio().getKyselyt().keySet()) {
@@ -56,14 +57,13 @@ public class KyselyValintaValikko extends JPanel {
         JLabel tyhja4 = new JLabel("");
 
         KyselyValintaKuuntelija kuuntelija = new KyselyValintaKuuntelija(
-                this, nimiLista, valintaPainike);
+                this, nimiLista, syotePalaute, valintaPainike);
 
         valintaPainike.addActionListener(kuuntelija);
 
-
         add(tyhja);
         add(valintaKehotus);
-        add(tyhja2);
+        add(syotePalaute);
         add(listanScrollaaja);
         add(tyhja3);
         add(valintaPainike);
@@ -76,5 +76,10 @@ public class KyselyValintaValikko extends JPanel {
         kayttis.lisaaValikko(Valikko.ANALYSOINTIKYSYMYS, kysymysValikko);
         kayttis.vaihdaValikko(vaihettava);
     }
+        
+        
+        public Kyselysailio getSailio(){
+            return kayttis.getSailio();
+        }
     
 }

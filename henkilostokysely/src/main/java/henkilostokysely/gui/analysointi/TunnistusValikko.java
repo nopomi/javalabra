@@ -43,7 +43,6 @@ public class TunnistusValikko extends JPanel{
         tunnuslukuKentta.addActionListener(kuuntelija);
         tallennuspainike.addActionListener(kuuntelija);
 
-
         add(tyhja);
         add(tayttoKehotus);
         add(tyhja2);
@@ -52,8 +51,6 @@ public class TunnistusValikko extends JPanel{
         add(tyhja3);
         add(new JLabel(""));
         add(tallennuspainike);
-
-
     }
 
     void vaihdaValikko(Valikko valikko) {
