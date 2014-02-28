@@ -11,8 +11,9 @@ import java.util.ArrayList;
 /**
  *
  * @author Miska
- * Toistaiseksi epäselvä, tulee jonkin sortin rakenne joka purkaa
- * numeerista vastausdataa tilastoiksi ja ilmoittaa ne käyttöliittymälle
+ * Metodi purkaa numeerista vastausdataa ArrayList-aineistoksi joka
+ * laitetaan eteenpäin NumeerinenAineisto-luokkaan käyttiksen toimesta
+ * @see NumeerinenAineisto
  * 
  */
 public class NumeeristenVastaustenPurkaja {

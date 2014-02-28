@@ -2,6 +2,11 @@ package henkilostokysely.domain;
 
 import java.util.HashMap;
 
+/**
+ * Luokka jossa on kysymyksiä sisältävä Kysely-olio, jolla on nimi.
+ * @author Miska
+ */
+
 public class Kysely {
 
     private HashMap<Integer, Kysymys> kysymykset;
@@ -40,8 +45,8 @@ public class Kysely {
     /**
      * Metodi luo uuden kysymyksen käyttäen Kysymys-luokan konstruktoria.
      * Ottaa parametrina kysymyksen tekstinä ja vastaustyypin.
-     * @param kysymysteksti
-     * @param vastaustyyppi
+     * @param kysymysteksti Kysymys tekstinä
+     * @param vastaustyyppi Kysymyksen vastauksen muoto (enum)
      * @return luotu Kysymys-olio
      */
     public Kysymys luoKysymys(String kysymysteksti, Vastaustyyppi tyyppi){
@@ -64,6 +69,12 @@ public class Kysely {
     public String getNimi(){
         return this.nimi;
     }
+    
+    /**
+     * Metodi palauttaa kyselyn kysymysten määrän, käytetään käyttöliittymässä
+     * @see henkilostokysely.gui.luonti.KysymysValikko
+     * @return kysymysten määrä kokonaislukuna
+     */
     
     public int getKoko(){
         return this.kysymykset.size();

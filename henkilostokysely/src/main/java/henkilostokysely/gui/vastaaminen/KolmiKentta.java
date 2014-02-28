@@ -43,7 +43,6 @@ public class KolmiKentta extends JPanel implements VastausKentta{
         add(vastausKentta2);
         add(new JLabel(""));
         add(vastausKentta3);
-        
     }
 
     @Override
@@ -51,5 +50,4 @@ public class KolmiKentta extends JPanel implements VastausKentta{
         return vastausKentta1.getText()+","+vastausKentta2.getText()+","+
                 vastausKentta3.getText();
     }
-    
 }

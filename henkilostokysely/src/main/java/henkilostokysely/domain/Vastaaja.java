@@ -4,7 +4,8 @@ package henkilostokysely.domain;
 
 
 /**
- *
+ * Vastaaja-olio, jolla on nimi ja henkilönumero. Luodaan kun kyselyyn
+ * vastaava henkilö käynnistää järjestelmän.
  * @author Miska
  */
 public class Vastaaja {
@@ -23,7 +24,6 @@ public class Vastaaja {
         this.nimi = nimi;
     }
     
-    
     /**
      * Metodi palauttaa kutsutulle oliolle henkilostonumeron.
      * @return yksilöivä henkilöstönumero
@@ -31,8 +31,6 @@ public class Vastaaja {
     public int getNumero(){
         return this.henkilostoNumero;
     }
-    
-
     
     /**
      * Metodi palauttaa kutsutulle oliolle vastaajan nimen.

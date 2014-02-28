@@ -14,7 +14,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author mnoponen@cs
+ * @see henkilostokysely.gui.Valikko
  */
 public class AsteikkoVastausKentta extends JPanel implements VastausKentta{
     private final Kysymys kysymys;

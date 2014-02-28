@@ -42,7 +42,6 @@ public class TietoValikko extends JPanel {
         henkilostoNumeroKentta.addActionListener(kuuntelija);
         tallennuspainike.addActionListener(kuuntelija);
 
-
         add(tyhja);
         add(tayttoKehotus);
         add(syotePalaute);
@@ -51,10 +50,6 @@ public class TietoValikko extends JPanel {
         add(tyhja3);
         add(new JLabel(""));
         add(tallennuspainike);
-
-
-
-
     }
 
     void vaihdaValikko(Valikko valikko, Vastaaja vastaaja) {
@@ -62,6 +57,5 @@ public class TietoValikko extends JPanel {
                 vastaaja);
         kayttis.lisaaValikko(Valikko.VASTAAJAVALINTA, kyselynvalintaValikko);
         kayttis.vaihdaValikko(valikko);
-
     }
 }

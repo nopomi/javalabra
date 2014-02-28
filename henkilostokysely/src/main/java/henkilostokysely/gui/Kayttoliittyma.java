@@ -45,7 +45,7 @@ public class Kayttoliittyma implements Runnable {
     }
 
     /**
-     * Luo kaikki valikot, jotka tässä vaiheessa voidaan luoda.
+     * Luo kaikki valikot, jotka tässä vaiheessa voidaan luoda (ei päivitettävät)
      * Jotkut valikot ovat sen verran raskaita ja epätodennäköisesti
      * aktivoidaan - että ne luodaan vasta sitten kun sinne siirrytään.
      * @param container
@@ -107,11 +107,23 @@ public class Kayttoliittyma implements Runnable {
 
     }
     
+    /**
+     * Metodi lisää valikon Käyttöliittymään, jotta se voidaan aktivoida
+     * sen kautta myöhemmin.
+     * @param valikko
+     * @param paneeli 
+     */
     
     public void lisaaValikko(Valikko valikko, JPanel paneeli){
         valikot.put(valikko, paneeli);
         frame.getContentPane().add(paneeli);
     }
+    
+    /**
+     * Metodi poistaa käyttöliittymästä valikkoja, kun niitä ei enää käytetä.
+     * Samanlaisia valikoita ei voi olla useita Käyttöliittymässä.
+     * @param poistettava 
+     */
     
     public void poistaValikko(Valikko poistettava){
         valikot.remove(poistettava);

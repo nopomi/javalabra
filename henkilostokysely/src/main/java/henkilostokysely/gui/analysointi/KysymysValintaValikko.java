@@ -1,7 +1,4 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package henkilostokysely.gui.analysointi;
 
 import henkilostokysely.domain.Kysely;
@@ -81,6 +78,12 @@ public class KysymysValintaValikko extends JPanel {
         kayttis.poistaValikko(Valikko.ANALYSOINTIKYSYMYS);
         kayttis.vaihdaValikko(vaihdettava);
     }
+    
+    /**
+     * Metodi tarkistaa valitun kysymyksen tyypin ja ohjaa oikeanlaiseen
+     * valikkonäkymään.
+     * @param valintaIndeksi 
+     */
 
     public void vaihdaValikko(int valintaIndeksi) {
 

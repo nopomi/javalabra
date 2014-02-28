@@ -10,6 +10,7 @@ import javax.swing.JPanel;
 
 /**
  * Valikko-luokka, jossa kiitetään vastaajaa
+ * @see Valikko
  * @author Miska
  */
 public class KiitosValikko extends JPanel{

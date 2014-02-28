@@ -6,14 +6,16 @@ import java.io.FileReader;
 
 
 /**
- * Luokka lukee csv-tiedostoja ja purkaa ne kaavioiksi.
+ * Luokka lukee csv-tiedostoja ja purkaa ne verkostokaavioiksi.
  * @author Miska
  */
 public class SNATiedostonPurkaja {
     
     
     /**
-     *
+     * Metodi purkaa annetun tiedostonimen perusteella annettua tietoa
+     * verkostokaavioksi. Se tarkistaa sisällön oikeellisuuden ennen
+     * sen siirtämistä eteenpäin.
      * @param tiedostoNimi
      * @return 
      */
@@ -28,10 +30,11 @@ public class SNATiedostonPurkaja {
             
             br = new BufferedReader(new FileReader(tiedostoNimi));
             while((line = br.readLine()) !=null){
+                //pilkkoo vastauksesta vastaajahenkilön noodin
                 String[] vastaukset = line.split(valiMerkki);
                 Noodi testiNoodi = new Noodi(Integer.parseInt(vastaukset[0]));
                 Noodi lahde = kaavio.lisaaNoodi(testiNoodi);
-                
+                //pilkkoo vastauksesta muut osat ja tekee niiden välille linkit
                 for (int i = 1; i < vastaukset.length; i++) {
                     try{
                     Noodi testiKohde = new Noodi(Integer.parseInt(vastaukset[i]));

@@ -15,7 +15,7 @@ import javax.swing.JTextField;
 
 /**
  *
- * @author mnoponen@cs
+ *
  */
 public class TietoValikkoKuuntelija implements ActionListener {
 
@@ -33,7 +33,12 @@ public class TietoValikkoKuuntelija implements ActionListener {
         this.syotePalaute = syotePalaute;
         this.tallennuspainike = tallennuspainike;
     }
-
+    
+    /**
+     * Tarkistaa käyttäjän syötteen ja luo annettujen tietojen perusteella
+     * Vastaaja-olion
+     * @param e 
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
 

@@ -31,6 +31,12 @@ public class KyselyValintaKuuntelija implements ActionListener {
         this.valintaPainike = valintaPainike;
 
     }
+    
+    /**
+     * Metodi tarkistaa syötteen muodon ennen siirtymistä
+     * Kysymys-näkymään
+     * @param e 
+     */
 
     @Override
     public void actionPerformed(ActionEvent e) {

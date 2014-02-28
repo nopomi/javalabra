@@ -31,6 +31,12 @@ public class KysymysValintaKuuntelija implements ActionListener {
         this.takaisinPainike=takaisinPainike;
         this.syotePalaute=syotePalaute;
     }
+    
+    /**
+     * Tarkistaa käyttäjän valinnan ja ilmoittaa valikonvaihdosta
+     * valikolle jota se kuuntelee
+     * @param e 
+     */
 
     @Override
     public void actionPerformed(ActionEvent e) {

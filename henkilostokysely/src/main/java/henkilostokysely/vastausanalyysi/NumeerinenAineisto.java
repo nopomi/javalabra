@@ -7,7 +7,9 @@ package henkilostokysely.vastausanalyysi;
 import java.util.ArrayList;
 
 /**
- *
+ * Luokka joka kapseloi tiettyyn kysymykseen annetut numeeriset vastaukset
+ * (Likert- ja Asteikko-vastaukset) ja laskee niistä yksinkertaisia 
+ * tilastoja.
  * @author Miska
  */
 public class NumeerinenAineisto {
@@ -17,6 +19,11 @@ public class NumeerinenAineisto {
     public NumeerinenAineisto(ArrayList<Integer> aineisto) {
         this.aineisto = aineisto;
     }
+    
+    /**
+     * Laskee aineiston aritmeettisen keskiarvon
+     * @return 
+     */
 
     public double laskeKeskiarvo() {
 
@@ -26,6 +33,13 @@ public class NumeerinenAineisto {
         }
         return (1.0 * summa) / aineisto.size();
     }
+    
+    /**
+     * Metodi laskee aineiston (populaatio?)keskihajonnan käyttäen
+     * laskeVarianssi-metodia.
+     * @see laskeVarianssi
+     * @return keskihajonta liukulukuna
+     */
 
     public double laskeKeskihajonta() {
 
@@ -33,7 +47,12 @@ public class NumeerinenAineisto {
         return Math.sqrt(varianssi);
 
     }
-
+    
+    /**
+     * Metodi laskee aineiston varianssin käyttäen laskeKeskiarvo-metodia.
+     * Jos vastauksia on vain yksi, palauttaa 0.
+     * @return 
+     */
     public double laskeVarianssi() {
         double keskiarvo = laskeKeskiarvo();
         double erotusneliosumma = 0;
@@ -42,6 +61,12 @@ public class NumeerinenAineisto {
         }
         return erotusneliosumma / aineisto.size();
     }
+    
+    /**
+     * Metodi purkaa likert-kysymysten vastaukset prosentuaaliseksi jakaumaksi
+     * @return jakauma prosentteina integer arrayssa. 1 määrä indeksissä 0,
+     * 2 määrä indeksissä 1 jne.
+     */
 
     public int[] likertJakauma() {
         int[] jakaumat = new int[5];

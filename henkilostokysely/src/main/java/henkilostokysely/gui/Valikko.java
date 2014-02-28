@@ -5,8 +5,8 @@
 package henkilostokysely.gui;
 
 /**
- * Enum-luokassa kaikki erilaiset valikot, jotka ovat olemassa
- * @author Miska
+ * Enum-luokassa kaikki erilaiset valikot, joita on olemassa
+ *
  */
 public enum Valikko {
     
@@ -33,7 +33,7 @@ public enum Valikko {
     VASTAAJAKIITOS,
     
     /**
-     * Analysoija antaa omat tietonsa (identifiointi)
+     * Analysoija antaa omat tietonsa ("identifiointi")
      */
     ANALYSOINTITIETO,
     /**
@@ -73,7 +73,6 @@ public enum Valikko {
      * Talletuksen jälkeinen vahvistusvalikko
      */
     LUONTILOPETUS
-    
    
     
 }

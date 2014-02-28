@@ -27,11 +27,8 @@ public class KiitosValikkoKuuntelija implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
         if (e.getSource() == takaisinValikkoonPainike) {
             valikko.vaihdaValikko(Valikko.ALOITUS);
-
         }
-
     }
 }

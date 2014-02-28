@@ -70,6 +70,13 @@ public class KyselyValintaValikko extends JPanel {
         add(tyhja4);
     }
     
+    /**
+     * Metodi sueraavan valikon kuuntelijan ilmoittaman indeksin perusteella,
+     * ja lisää sen käyttöliittymään
+     * @param vaihettava
+     * @param kyselyIndeksi 
+     */
+    
         public void vaihdaValikko(Valikko vaihettava, int kyselyIndeksi) {
         Kysely valittuKysely = (Kysely) kayttis.getSailio().getKyselyt().get(kyselyt[kyselyIndeksi]);
         KysymysValintaValikko kysymysValikko = new KysymysValintaValikko(kayttis, valittuKysely);

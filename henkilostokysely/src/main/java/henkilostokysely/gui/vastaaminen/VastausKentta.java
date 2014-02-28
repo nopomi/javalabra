@@ -7,11 +7,11 @@
 package henkilostokysely.gui.vastaaminen;
 
 /**
- *
+ * Rajapinta-luokka kaikille vastauskenttäluokille, jotka tallettavat 
+ * vastauksia.
  * @author mnoponen@cs
  */
 public interface VastausKentta {
     
     public String getVastaus();
-    
 }

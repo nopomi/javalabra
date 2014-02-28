@@ -75,6 +75,13 @@ public class ValintaValikko extends JPanel {
     public void vaihdaValikko(Valikko vaihdettava) {
         kayttis.vaihdaValikko(vaihdettava);
     }
+    
+    /**
+     * Metodi vaihtaa valikkoa ja ilmoittaa sille valitun kyselyn
+     * indeksin perusteella
+     * @param vaihettava Valikko johon siirrytään
+     * @param kyselyIndeksi Valitun kyselyn indeksi
+     */
 
     public void vaihdaValikko(Valikko vaihettava, int kyselyIndeksi) {
         Kysely valittuKysely = (Kysely) kayttis.getSailio().getKyselyt().get(kyselyt[kyselyIndeksi]);

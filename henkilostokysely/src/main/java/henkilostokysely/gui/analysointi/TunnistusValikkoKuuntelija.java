@@ -29,6 +29,13 @@ public class TunnistusValikkoKuuntelija implements ActionListener{
         this.tunnuslukuKentta = tunnuslukuKentta;
         this.tallennuspainike = tallennuspainike;
     }
+    
+    /**
+     * Metodi tallentaa analysoijan syöttämät tiedot, mutta ei toistaiseksi
+     * tee niillä mitään. Tähän voidaan myöhemmin kehittää jokin huikea
+     * ja kryptattu tunnistustoiminto.
+     * @param e 
+     */
 
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -40,11 +47,7 @@ public class TunnistusValikkoKuuntelija implements ActionListener{
             nimiKentta.setText("");
             tunnuslukuKentta.setText("");
             
-            //tähän voidaan kehittää joku huikea kryptattu tunnistustoiminto
-            //jos päätetään kehittää sovellusta edelleen.
-            
             valikko.vaihdaValikko(Valikko.ANALYSOINTIKYSELY);
-
         }
     }
     

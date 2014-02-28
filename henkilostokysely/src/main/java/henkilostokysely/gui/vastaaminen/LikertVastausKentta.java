@@ -12,7 +12,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 /**
- *
+ * @see Valikko
  * @author mnoponen@cs
  */
 class LikertVastausKentta extends JPanel implements VastausKentta {
