@@ -9,7 +9,7 @@ import java.io.FileReader;
  * Luokka lukee csv-tiedostoja ja purkaa ne verkostokaavioiksi.
  * @author Miska
  */
-public class SNATiedostonPurkaja {
+public class SNAVastaustenPurkaja {
     
     
     /**

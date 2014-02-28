@@ -37,6 +37,10 @@ public class AvoinVastausKentta extends JPanel implements VastausKentta{
 
     @Override
     public String getVastaus() {
+        if(this.vastaus.getText().isEmpty()){
+            System.out.println("avoin");
+            return null;
+        }
         return this.vastaus.getText();
     }
     

@@ -30,7 +30,6 @@ public class KyselyValikkoKuuntelija implements ActionListener{
         
         if(e.getSource()==painike){
             valikko.talletaVastaukset();
-            valikko.vaihdaValikko(Valikko.VASTAAJAKIITOS);
         }
         
     }

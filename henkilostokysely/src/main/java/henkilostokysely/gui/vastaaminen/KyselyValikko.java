@@ -24,6 +24,7 @@ public class KyselyValikko extends JPanel {
     private final HashMap kysymykset;
     private final Vastaaja vastaaja;
     private final VastausKentta[] kysymysKomponentit;
+    private JLabel syotePalaute;
 
     public KyselyValikko(Kayttoliittyma kayttis, Vastaaja vastaaja, Kysely kysely) {
         super(new GridLayout(kysely.getKoko() + 2, 2, 10, 10));
@@ -37,8 +38,10 @@ public class KyselyValikko extends JPanel {
 
     private void luoKomponentit() {
         JLabel vastausKehotus = new JLabel("Vastaa:");
+        syotePalaute = new JLabel("");
+        
         add(vastausKehotus);
-        add(new JLabel(""));
+        add(syotePalaute);
 
         int i = 0;
 
@@ -75,18 +78,33 @@ public class KyselyValikko extends JPanel {
 
     }
 
-    public void vaihdaValikko(Valikko vaihdettava) {
-        kayttis.vaihdaValikko(vaihdettava);
-    }
-
     public void talletaVastaukset() {
-
         int i = 0;
+        if(!tarkistaSyotteet()){
+            syotePalaute.setText("Vastaa oikealla tavalla!");
+            return;
+        }
         for (Object o : kysymykset.values()) {
             Kysymys kysymys = (Kysymys) o;
             kysymys.lisaaVastaus(vastaaja.getNumero(), kysymysKomponentit[i].getVastaus());
             i++;
         }
-
+        kayttis.vaihdaValikko(Valikko.VASTAAJAKIITOS);
+    }
+    
+    /**
+     * Metodi tarkistaa syötteet siten, että yksittäiset kentät palauttavat
+     * null jos niissä on jotain pielessä. Palauttaa false jos jokin on 
+     * väärin täytetty.
+     * @return 
+     */
+    
+    private boolean tarkistaSyotteet(){
+        for (int i = 0; i < kysymykset.values().size(); i++) {
+            if(kysymysKomponentit[i].getVastaus()==null){
+                return false;
+            }
+        }
+        return true;
     }
 }

@@ -1,6 +1,6 @@
 Aihe: verkostoja kartoittava henkilöstökysely
 
-Toteutetaan järjestelmän, jonka avulla jokin organisaatio voi kerätä mielipidetietoja
+Toteutetaan järjestelmä, jonka avulla jokin organisaatio voi kerätä mielipidetietoja
 jäseniltään ja kartoittaa olemassa olevia sosiaalisia verkostoja. Sen avulla henkilöstö
 vastaa sille asetettuihin avoimiin ja numeerisiin kysymyksiin joiden avulla pystytään
 kartoittamaan muutostarpeita ja avainyksilöitä.

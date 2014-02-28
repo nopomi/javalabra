@@ -47,6 +47,22 @@ public class KolmiKentta extends JPanel implements VastausKentta{
 
     @Override
     public String getVastaus() {
+        if (!vastausKentta1.getText().matches("[0-9]+")
+                    || vastausKentta1.getText().isEmpty()) {
+            System.out.println("eka");
+                return null;
+            }
+        if (!vastausKentta2.getText().matches("[0-9]+")
+                    || vastausKentta2.getText().isEmpty()) {
+            System.out.println("toka");
+                return null;
+            }
+        if (!vastausKentta3.getText().matches("[0-9]+")
+                    || vastausKentta3.getText().isEmpty()) {
+            System.out.println("kolmas");
+                return null;
+            }
+        
         return vastausKentta1.getText()+","+vastausKentta2.getText()+","+
                 vastausKentta3.getText();
     }

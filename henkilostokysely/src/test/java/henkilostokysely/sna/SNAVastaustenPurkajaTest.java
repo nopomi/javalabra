@@ -11,7 +11,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class SNATiedostonPurkajaTest {
+public class SNAVastaustenPurkajaTest {
     
     @Test
     public void SNAPurkajaToimii(){
@@ -20,7 +20,7 @@ public class SNATiedostonPurkajaTest {
         tallentaja.talletaVastaus(kysely, 3, "2,1,4");
         tallentaja.talletaVastaus(kysely, 1, "4,2,3");
         
-        SNATiedostonPurkaja purkaja = new SNATiedostonPurkaja();
+        SNAVastaustenPurkaja purkaja = new SNAVastaustenPurkaja();
         Kaavio kaavio = purkaja.puraVastauksetKaavioksi("SNAtestikysely_55_vastaukset.csv");
         
         assertEquals(4, kaavio.getKaavio().getVertexCount());
@@ -30,7 +30,7 @@ public class SNATiedostonPurkajaTest {
     
     @Test
     public void ToimiiJosTiedostoaEiOle(){
-        SNATiedostonPurkaja purkaja = new SNATiedostonPurkaja();
+        SNAVastaustenPurkaja purkaja = new SNAVastaustenPurkaja();
         Kaavio kaavio = purkaja.puraVastauksetKaavioksi("SNAKysely_olematon_vastaukset.csv");
         
         assertEquals(0, kaavio.getKaavio().getVertexCount());
