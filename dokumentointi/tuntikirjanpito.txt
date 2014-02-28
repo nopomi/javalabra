@@ -1,4 +1,4 @@
-Tuntikirjanpito:
+dTuntikirjanpito:
 
 15.1. 18:00-19:00 (1h) Aiheen ideointi
 16.1. 15:40-20:00 (4h20min) Aiheen ideointi, ensimmäisen viikon tehtävät (projektin tekeminen, github-säädöt, aihekuvaus jne)
@@ -31,4 +31,4 @@ Tuntikirjanpito:
 13022014: Viikon 5 deadlinessä ei oma ohjelma ole hirveästi laajentunut, johtuen viisaudenhampaiden poistosta
 ja sen seuraksena vahvasta lääkityksestä. Kompensoin tätä puutetta seuraavien päivien aikana. Pahoittelut
 
-Saldo nyt: 60h50min
+Saldo nyt: 76h20min

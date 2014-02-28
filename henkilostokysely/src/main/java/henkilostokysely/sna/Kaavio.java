@@ -57,7 +57,7 @@ public class Kaavio {
      * Metodi palauttaa kaavion kokonaisuudessaan.
      * @return kaavio
      */
-    public Object getKaavio(){
+    public DirectedSparseMultigraph getKaavio(){
         return this.kaavio;
     }
     
