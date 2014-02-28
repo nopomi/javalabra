@@ -25,10 +25,10 @@ dTuntikirjanpito:
 25.2. 18:00-20:00 (2h) Käyttöliittymän syötteiden tarkistuksen suunnittelu ja ohjelmoinnin aloitus
 26.2. 10:00-14:00 (4h) Syötteiden tarkistuksen ohjelmointi ja käyttöliittymän pienemmät korjaukset
 28.2. 11:00-14:30 (3h30min) Tallennusrakenteen pienet muutokset ja testaukset koulun koneella. Jar-tiedoston luominen ja testien laajentaminen tarvittavaan muotoon.
-
+28.2. 18:00-23:30 (5h30min) Löydettyjen bugien korjaus ja dokumentointien päivitys.
 
 
 13022014: Viikon 5 deadlinessä ei oma ohjelma ole hirveästi laajentunut, johtuen viisaudenhampaiden poistosta
 ja sen seuraksena vahvasta lääkityksestä. Kompensoin tätä puutetta seuraavien päivien aikana. Pahoittelut
 
-Saldo nyt: 76h20min
+Saldo nyt: 81h50min
