@@ -1,5 +1,6 @@
 package henkilostokysely.tallennus;
 
+import henkilostokysely.domain.Kysely;
 import java.io.FileWriter;
 
 /**
@@ -48,31 +49,10 @@ public class VastaustenTallentaja {
      * @param vastaaja
      * @param vastaus
      */
-    public void talletaVastaus(int vastaaja, String vastaus) {
+    public void talletaVastaus(Kysely kysely, int vastaaja, String vastaus) {
         try{
-            FileWriter kirjoittaja = new FileWriter(this.indeksi+"_vastaukset.csv", true);
+            FileWriter kirjoittaja = new FileWriter(kysely.getNimi()+"_"+this.indeksi+"_vastaukset.csv", true);
             kirjoittaja.append(vastaaja+","+vastaus+"\n");
-            kirjoittaja.close();
-        } catch (Exception e){
-            e.printStackTrace(System.out);
-        }
-    }
-    
-    /**
-     * Metodi tallentaa kolmikenttävastauksia tiedostoon.
-     * Kolmikenttä-vastaustyypissä vastauksia annetaan aina 3 vastaajaa kohden.
-     * Metodia on siis kuormitettu sen takia että voitaisiin myös tämänlaisia
-     * vastauksia käsitellä järkevällä tavalla.
-     * @param vastaaja
-     * @param vastaus1
-     * @param vastaus2
-     * @param vastaus3
-     * @see henkilostokysely.domain.Vastaustyyppi
-     */
-    public void talletaVastaus(int vastaaja, int vastaus1, int vastaus2, int vastaus3){
-        try{
-            FileWriter kirjoittaja = new FileWriter(this.indeksi+"_vastaukset.csv", true);
-            kirjoittaja.append(vastaaja+","+vastaus1+","+vastaus2+","+vastaus3+"\n");
             kirjoittaja.close();
         } catch (Exception e){
             e.printStackTrace(System.out);

@@ -12,6 +12,7 @@ public class Kysymys {
     private Vastaustyyppi tyyppi;
     private VastaustenTallentaja tallentaja;
     private int indeksi;
+    private Kysely kysely;
     
     /**
      * Metodi luo uuden Kysymys-olion ja lisää sille VastaustenTallentajan.
@@ -104,6 +105,14 @@ public class Kysymys {
      * @param vastaus annettu vastaus tekstinä
      */
     public void lisaaVastaus(int henkilostoNumero, String vastaus){
-        this.tallentaja.talletaVastaus(henkilostoNumero, vastaus);
+        this.tallentaja.talletaVastaus(kysely, henkilostoNumero, vastaus);
+    }
+    
+    public void setKysely(Kysely kysely){
+        this.kysely=kysely;
+    }
+    
+    public Kysely getKysely(){
+        return this.kysely;
     }
 }

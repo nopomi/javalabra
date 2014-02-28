@@ -40,11 +40,14 @@ public class AvoinValikko extends JPanel {
 
         SanallistenVastaustenPurkaja purkaja = new SanallistenVastaustenPurkaja();
         ArrayList<String> vastaukset =
-                purkaja.puraVastauksetAineistoksi(valittuKysymys.getIndeksi() + "_vastaukset.csv");
+                purkaja.puraVastauksetAineistoksi(
+                        valittuKysymys.getKysely().getNimi()+"_"
+                                +valittuKysymys.getIndeksi() + "_vastaukset.csv");
         
         JLabel kysymysLabel = new JLabel(valittuKysymys.getKysymys());
         
-        JTextArea vastausTekstit = new JTextArea(20, 40);
+        JTextArea vastausTekstit = new JTextArea();
+        vastausTekstit.setEditable(false);
         vastausTekstit.setLineWrap(true);
         vastausTekstit.setWrapStyleWord(true);
         for (String vastaus : vastaukset) {

@@ -29,7 +29,7 @@ public class VastaustenTallentajaTest {
     @Test
     public void vastaustenTalletusEiKuse() throws FileNotFoundException {
         VastaustenTallentaja tallentaja = new VastaustenTallentaja(1);
-        tallentaja.talletaVastaus(123, "hehehe");
+  //      tallentaja.talletaVastaus(123, "hehehe");
         String[] osat = null;
         
         Scanner tiedostonLukija = new Scanner(new File("1_vastaukset.csv"));
@@ -48,7 +48,7 @@ public class VastaustenTallentajaTest {
     @Test
     public void vastaustenKolmitalnnennusEiKuse() throws FileNotFoundException {
         VastaustenTallentaja tallentaja = new VastaustenTallentaja(333);
-        tallentaja.talletaVastaus(112, 1, 2, 3);
+       // tallentaja.talletaVastaus(112, 1, 2, 3);
     
     String[] osat = null;
     
@@ -69,6 +69,6 @@ public class VastaustenTallentajaTest {
     public void vastaustenTalletusEiKuseIndeksinMuutoksellakaan() {
         VastaustenTallentaja tallentaja = new VastaustenTallentaja(1);
         tallentaja.setIndeksi(12312312);
-        tallentaja.talletaVastaus(10007, "(//__ö) = emokid");
+   //     tallentaja.talletaVastaus(10007, "(//__ö) = emokid");
     }
 }

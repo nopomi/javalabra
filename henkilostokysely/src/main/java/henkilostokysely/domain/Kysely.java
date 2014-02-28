@@ -33,6 +33,7 @@ public class Kysely {
             return false;
         }
         this.kysymykset.put(kysymykset.size()+1, lisattava);
+        lisattava.setKysely(this);
         return true;
     }
     
@@ -46,7 +47,6 @@ public class Kysely {
     public Kysymys luoKysymys(String kysymysteksti, Vastaustyyppi tyyppi){
         Kysymys kysymys = new Kysymys(kysymysteksti, tyyppi, kysymykset.size()+1);
         return kysymys;
-        
     }
 
     /**

@@ -43,7 +43,8 @@ public class SNAValikko extends JPanel {
         
        
         SNATiedostonPurkaja purkaja = new SNATiedostonPurkaja();
-        Kaavio kaavio = purkaja.puraVastauksetKaavioksi(kysymys.getIndeksi() + "_vastaukset.csv");
+        Kaavio kaavio = purkaja.puraVastauksetKaavioksi(kysymys.getKysely().getNimi()
+                +"_"+kysymys.getIndeksi() + "_vastaukset.csv");
         DirectedSparseMultigraph<Noodi, Linkki> graph =
                 (DirectedSparseMultigraph<Noodi, Linkki>) kaavio.getKaavio();
 

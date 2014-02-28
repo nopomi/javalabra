@@ -42,7 +42,8 @@ public class TilastoValikko extends JPanel {
 
         NumeeristenVastaustenPurkaja purkaja = new NumeeristenVastaustenPurkaja();
         ArrayList<Integer> data = purkaja.puraVastauksetAineistoksi(
-                valittuKysymys.getIndeksi() + "_vastaukset.csv");
+                valittuKysymys.getKysely().getNimi()+"_"
+                        +valittuKysymys.getIndeksi() + "_vastaukset.csv");
         NumeerinenAineisto aineisto = new NumeerinenAineisto(data);
         
         JLabel kysymys = new JLabel(valittuKysymys.getKysymys());
