@@ -68,7 +68,7 @@ public class Kysymys {
     public int hashCode() {
         int hash = 7;
         hash = 59 * hash + Objects.hashCode(this.kysymys);
-        hash = 59 * hash + (this.tyyppi != null ? this.tyyppi.hashCode() : 0);
+        hash = 59 * hash + this.tyyppi.hashCode();
         return hash;
     }
         

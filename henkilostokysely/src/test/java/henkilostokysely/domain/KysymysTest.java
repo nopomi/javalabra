@@ -48,14 +48,22 @@ public class KysymysTest {
         
         assertFalse(kyssari.equals(kysymys));
         assertFalse(kyssari.equals(kyssari2));
-        
+        assertFalse(kyssari.equals(null));
     }
     
     @Test
     public void kysymyksenHashCodeToimii(){
         Kysymys kyssari = new Kysymys("Oletko?", Vastaustyyppi.ASTEIKKO, 1);
         Kysymys vertailuKyssari = new Kysymys("Oletko?", Vastaustyyppi.ASTEIKKO, 3);
-        
         assertEquals(kyssari.hashCode(),vertailuKyssari.hashCode());
+    }
+    
+    @Test
+    public void SetJaGetKyselyToimii(){
+        Kysymys kyssari = new Kysymys("Oletko?", Vastaustyyppi.ASTEIKKO, 1);
+        Kysely kysely = new Kysely("testi");
+        kyssari.setKysely(kysely);
+        
+        assertEquals(kysely, kyssari.getKysely());
     }
 }

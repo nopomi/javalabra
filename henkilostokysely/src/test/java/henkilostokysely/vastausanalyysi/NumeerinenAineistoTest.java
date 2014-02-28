@@ -47,6 +47,23 @@ public class NumeerinenAineistoTest {
         Double varianssi = aineisto.laskeVarianssi();
 
         assertEquals(10.8, varianssi, 0.01);
+        
+    }
+    
+    @Test
+    public void varianssinLaskeminenToimiiTarkasti(){
+        data.clear();
+        data.add(1);
+        data.add(1);
+        data.add(2);
+        data.add(2);
+        data.add(3);
+        data.add(3);
+        data.add(4);
+        data.add(5);
+        
+        aineisto = new NumeerinenAineisto(data);
+        assertEquals(1.734375, aineisto.laskeVarianssi() , 0.0001);
     }
 
     @Test
@@ -80,5 +97,27 @@ public class NumeerinenAineistoTest {
         assertEquals(10, jakaumat[3]);
         assertEquals(30, jakaumat[4]);
     }
-
+    
+    @Test
+    public void likertJakaumanLaskeminenToimiiTarkasti(){
+        data.clear();
+        data.add(1);
+        data.add(1);
+        data.add(2);
+        data.add(2);
+        data.add(3);
+        data.add(3);
+        data.add(4);
+        data.add(5);
+        data.add(1);
+        
+        NumeerinenAineisto laskettavaAineisto = new NumeerinenAineisto(data);
+        int[] jakauma = laskettavaAineisto.likertJakauma();
+        
+        assertEquals(33,jakauma[0]);
+        assertEquals(22,jakauma[1]);
+        assertEquals(22,jakauma[2]);
+        assertEquals(11,jakauma[3]);
+        assertEquals(11,jakauma[4]);
+    }
 }

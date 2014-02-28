@@ -79,6 +79,7 @@ public class KaavioTest {
         
         assertTrue(paluunoodi2==paluunoodi3);
         assertTrue(paluunoodi==noodi);
+        assertTrue(kaavio.toString()!=null);
         
         
     }

@@ -25,7 +25,6 @@ public class SNATiedostonPurkajaTest {
         
         assertEquals(4, kaavio.getKaavio().getVertexCount());
         assertEquals(6, kaavio.getKaavio().getEdgeCount());
-        
     }
     
     

@@ -67,4 +67,24 @@ public class KyselyTest {
         assertFalse(kysely.lisaaKysymys("trolo", Vastaustyyppi.LIKERT));
         assertTrue(kysely.lisaaKysymys("Onko?", Vastaustyyppi.AVOIN));
     }
+    
+    @Test
+    public void kyselynKokoGetteriToimii(){
+        kysely.lisaaKysymys("trolo", Vastaustyyppi.AVOIN);
+        kysely.lisaaKysymys("testikysymys", Vastaustyyppi.KOLMIKENTTA);
+        kysely.lisaaKysymys("testikysymys", Vastaustyyppi.LIKERT);
+        kysely.lisaaKysymys("trolo", Vastaustyyppi.AVOIN);
+        
+        assertEquals(3, kysely.getKoko());
+}
+    
+    @Test
+    public void kyselynGetteriIndeksiToimii(){
+        kysely.lisaaKysymys("trolo", Vastaustyyppi.AVOIN);
+        kysely.lisaaKysymys("testikysymys", Vastaustyyppi.KOLMIKENTTA);
+        kysely.lisaaKysymys("testikysymys2", Vastaustyyppi.LIKERT);
+        kysely.lisaaKysymys("trolo", Vastaustyyppi.AVOIN);
+        Kysymys kyssari = (Kysymys)kysely.getKysymykset().get(3);
+        assertEquals("testikysymys2", kyssari.getKysymys());
+    }
 }
