@@ -40,7 +40,6 @@ public class ValintaValikkoKuuntelija implements ActionListener {
                 valikko.vaihdaValikko(Valikko.VASTAAJAKYSELY, valintaIndeksi);
             } else {
                 syotePalaute.setText("Valitse ensin kysely!");
-                return;
             }
         }
     }
