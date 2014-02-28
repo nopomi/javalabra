@@ -19,11 +19,11 @@ import javax.swing.JTextField;
  */
 public class TietoValikkoKuuntelija implements ActionListener {
 
-    private TietoValikko valikko;
-    private JTextField nimiKentta;
-    private JTextField henkilostonumeroKentta;
-    private JLabel syotePalaute;
-    private JButton tallennuspainike;
+    private final TietoValikko valikko;
+    private final JTextField nimiKentta;
+    private final JTextField henkilostonumeroKentta;
+    private final JLabel syotePalaute;
+    private final JButton tallennuspainike;
 
     public TietoValikkoKuuntelija(TietoValikko valikko, JTextField nimiKentta,
             JTextField henkilostonumeroKentta, JLabel syotePalaute, JButton tallennuspainike) {

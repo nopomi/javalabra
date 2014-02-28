@@ -22,8 +22,8 @@ import javax.swing.JTable;
  * @author Miska
  */
 public class LikertValikko extends JPanel{
-    private Kayttoliittyma kayttis;
-    private Kysymys valittuKysymys;
+    private final Kayttoliittyma kayttis;
+    private final Kysymys valittuKysymys;
 
     public LikertValikko(Kayttoliittyma kayttis, Kysymys valittuKysymys) {
         super();

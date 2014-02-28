@@ -17,11 +17,11 @@ import javax.swing.JList;
  */
 public class KysymysValintaKuuntelija implements ActionListener {
 
-    private KysymysValintaValikko valikko;
-    private JList kyselyValikko;
-    private JButton valintaPainike;
-    private JButton takaisinPainike;
-    private JLabel syotePalaute;
+    private final KysymysValintaValikko valikko;
+    private final JList kyselyValikko;
+    private final JButton valintaPainike;
+    private final JButton takaisinPainike;
+    private final JLabel syotePalaute;
 
     public KysymysValintaKuuntelija(KysymysValintaValikko valikko, JList lista, 
             JLabel syotePalaute, JButton valintaPainike, JButton takaisinPainike) {

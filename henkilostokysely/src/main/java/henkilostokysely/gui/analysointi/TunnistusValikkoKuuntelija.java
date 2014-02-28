@@ -17,10 +17,10 @@ import javax.swing.JTextField;
  */
 public class TunnistusValikkoKuuntelija implements ActionListener{
 
-    private TunnistusValikko valikko;
-    private JTextField nimiKentta;
-    private JPasswordField tunnuslukuKentta;
-    private JButton tallennuspainike;
+    private final TunnistusValikko valikko;
+    private final JTextField nimiKentta;
+    private final JPasswordField tunnuslukuKentta;
+    private final JButton tallennuspainike;
 
     public TunnistusValikkoKuuntelija(TunnistusValikko valikko, JTextField nimiKentta,
             JPasswordField tunnuslukuKentta, JButton tallennuspainike) {
@@ -37,8 +37,10 @@ public class TunnistusValikkoKuuntelija implements ActionListener{
             String henkilonNimi = nimiKentta.getText();
             char[] tunnusluku = new char[10];
             tunnusluku = tunnuslukuKentta.getPassword();
+            nimiKentta.setText("");
+            tunnuslukuKentta.setText("");
             
-            //tähän voidaan kehittää joku huikea tunnistustoiminto
+            //tähän voidaan kehittää joku huikea kryptattu tunnistustoiminto
             //jos päätetään kehittää sovellusta edelleen.
             
             valikko.vaihdaValikko(Valikko.ANALYSOINTIKYSELY);

@@ -23,9 +23,9 @@ import javax.swing.ListSelectionModel;
  */
 public class ValintaValikko extends JPanel {
 
-    private Kayttoliittyma kayttis;
-    private String[] kyselyt;
-    private Vastaaja vastaaja;
+    private final Kayttoliittyma kayttis;
+    private final String[] kyselyt;
+    private final Vastaaja vastaaja;
 
     public ValintaValikko(Kayttoliittyma kayttis, Vastaaja vastaaja) {
         super(new GridLayout(3, 3, 10, 10));

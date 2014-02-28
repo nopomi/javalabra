@@ -33,7 +33,7 @@ public class NumeeristenVastaustenPurkaja {
                
                 try{
                     aineisto.add(Integer.parseInt(vastaus[1]));
-                } catch (Exception e){
+                } catch (NumberFormatException e){
                     System.out.println("Vastaus väärässä muodossa");
                 }
                 

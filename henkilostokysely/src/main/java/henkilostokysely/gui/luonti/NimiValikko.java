@@ -13,7 +13,7 @@ import javax.swing.*;
  */
 public class NimiValikko extends JPanel {
 
-    private Kayttoliittyma kayttis;
+    private final Kayttoliittyma kayttis;
 
     /**
      *

@@ -15,8 +15,8 @@ import javax.swing.JButton;
  */
 public class LikertValikkoKuuntelija implements ActionListener{
     
-    private LikertValikko valikko;
-    private JButton takaisinPainike;
+    private final LikertValikko valikko;
+    private final JButton takaisinPainike;
 
     public LikertValikkoKuuntelija(LikertValikko valikko, JButton takaisinPainike) {
         this.valikko=valikko;

@@ -26,8 +26,8 @@ import javax.swing.JPanel;
  */
 public class SNAValikko extends JPanel {
 
-    private Kayttoliittyma kayttis;
-    private Kysymys kysymys;
+    private final Kayttoliittyma kayttis;
+    private final Kysymys kysymys;
 
     SNAValikko(Kayttoliittyma kayttis, Kysymys valittuKysymys) {
         super(new FlowLayout(FlowLayout.LEADING));

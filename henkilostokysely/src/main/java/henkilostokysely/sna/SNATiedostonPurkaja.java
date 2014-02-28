@@ -15,6 +15,7 @@ public class SNATiedostonPurkaja {
     /**
      *
      * @param tiedostoNimi
+     * @return 
      */
     public Kaavio puraVastauksetKaavioksi(String tiedostoNimi){
         
@@ -32,9 +33,14 @@ public class SNATiedostonPurkaja {
                 Noodi lahde = kaavio.lisaaNoodi(testiNoodi);
                 
                 for (int i = 1; i < vastaukset.length; i++) {
+                    try{
                     Noodi testiKohde = new Noodi(Integer.parseInt(vastaukset[i]));
                     Noodi kohde = kaavio.lisaaNoodi(testiKohde);
                     kaavio.lisaaLinkki(lahde, kohde);
+                    
+                    } catch(NumberFormatException e){
+                        System.out.println("Vastaus väärässä muodossa!");
+                    }
                 }
                 
             }

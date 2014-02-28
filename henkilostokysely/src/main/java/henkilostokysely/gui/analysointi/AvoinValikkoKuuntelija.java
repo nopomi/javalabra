@@ -15,8 +15,8 @@ import javax.swing.JButton;
  */
 public class AvoinValikkoKuuntelija implements ActionListener{
     
-    private AvoinValikko valikko;
-    private JButton takaisinPainike;
+    private final AvoinValikko valikko;
+    private final JButton takaisinPainike;
 
     public AvoinValikkoKuuntelija(AvoinValikko valikko, JButton takaisinPainike) {
         this.valikko=valikko;

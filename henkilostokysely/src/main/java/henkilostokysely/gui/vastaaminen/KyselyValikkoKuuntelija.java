@@ -15,8 +15,8 @@ import javax.swing.JButton;
  */
 public class KyselyValikkoKuuntelija implements ActionListener{
     
-    private KyselyValikko valikko;
-    private JButton painike;
+    private final KyselyValikko valikko;
+    private final JButton painike;
     
     public KyselyValikkoKuuntelija(KyselyValikko valikko, JButton painike){
         

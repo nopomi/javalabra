@@ -23,8 +23,8 @@ import javax.swing.ListSelectionModel;
  */
 public class KyselyValintaValikko extends JPanel {
     
-    private Kayttoliittyma kayttis;
-    private String[] kyselyt;
+    private final Kayttoliittyma kayttis;
+    private final String[] kyselyt;
 
     public KyselyValintaValikko(Kayttoliittyma kayttis) {
         super(new GridLayout(3,3,10,10));

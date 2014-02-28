@@ -17,8 +17,8 @@ import javax.swing.JPanel;
  * @author mnoponen@cs
  */
 public class AsteikkoVastausKentta extends JPanel implements VastausKentta{
-    private Kysymys kysymys;
-    private String[] vaihtoehdot = {"1", "2", "3", "4", "5"};
+    private final Kysymys kysymys;
+    private final String[] vaihtoehdot = {"1", "2", "3", "4", "5"};
     private JComboBox vastaus;
     
     public AsteikkoVastausKentta(Kysymys kysymys){

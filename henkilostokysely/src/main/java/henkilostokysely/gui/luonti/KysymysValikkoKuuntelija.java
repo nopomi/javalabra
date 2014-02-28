@@ -20,12 +20,12 @@ import javax.swing.JTextField;
  */
 public class KysymysValikkoKuuntelija implements ActionListener {
 
-    private KysymysValikko valikko;
-    private JTextField kysymys;
-    private JComboBox vastaustyyppi;
-    private JButton valmis;
-    private JButton lisaa;
-    private JLabel lisaystieto;
+    private final KysymysValikko valikko;
+    private final JTextField kysymys;
+    private final JComboBox vastaustyyppi;
+    private final JButton valmis;
+    private final JButton lisaa;
+    private final JLabel lisaystieto;
 
     public KysymysValikkoKuuntelija(KysymysValikko valikko,
             JTextField tekstikentta, JComboBox vastaustyyppi,

@@ -17,8 +17,8 @@ import javax.swing.JPanel;
  */
 class LikertVastausKentta extends JPanel implements VastausKentta {
 
-    private Kysymys kysymys;
-    private String[] vaihtoehdot = {"Samaa mieltä", "Osittain samaa mieltä",
+    private final Kysymys kysymys;
+    private final String[] vaihtoehdot = {"Samaa mieltä", "Osittain samaa mieltä",
         "Ei samaa eikä eri mieltä", "Osittain eri mieltä", "Eri mieltä"};
     private JComboBox vastaus;
 

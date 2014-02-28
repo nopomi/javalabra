@@ -13,7 +13,7 @@ import javax.swing.JButton;
  */
 public class LopetusValikkoKuuntelija implements ActionListener{
     
-    private LopetusValikko valikko;
+    private final LopetusValikko valikko;
     private final JButton takaisinValikkoonPainike;
     
     public LopetusValikkoKuuntelija(LopetusValikko valikko, JButton painike){

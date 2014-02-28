@@ -15,8 +15,8 @@ import javax.swing.JButton;
  */
 public class TilastoValikkoKuuntelija implements ActionListener{
     
-    private TilastoValikko valikko;
-    private JButton painike;
+    private final TilastoValikko valikko;
+    private final JButton painike;
 
     public TilastoValikkoKuuntelija(TilastoValikko valikko, JButton takaisinPainike) {
         this.valikko=valikko;

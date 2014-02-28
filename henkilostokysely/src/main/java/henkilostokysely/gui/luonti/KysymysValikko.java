@@ -14,12 +14,13 @@ import javax.swing.*;
  */
 public class KysymysValikko extends JPanel {
 
-    private Kayttoliittyma kayttis;
+    private final Kayttoliittyma kayttis;
     private Kysely kysely;
 
     /**
      *
      * @param kayttis
+     * @param kysely
      */
     public KysymysValikko(Kayttoliittyma kayttis, Kysely kysely) {
         super(new GridLayout(3, 3, 10, 10));

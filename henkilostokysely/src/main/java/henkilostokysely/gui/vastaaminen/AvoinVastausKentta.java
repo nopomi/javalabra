@@ -17,7 +17,7 @@ import javax.swing.JTextArea;
  * @author mnoponen@cs
  */
 public class AvoinVastausKentta extends JPanel implements VastausKentta{
-    private Kysymys kysymys;
+    private final Kysymys kysymys;
     private JTextArea vastaus;
     
     public AvoinVastausKentta(Kysymys kysymys){

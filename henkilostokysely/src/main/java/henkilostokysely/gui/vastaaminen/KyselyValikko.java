@@ -19,11 +19,11 @@ import javax.swing.JPanel;
  */
 public class KyselyValikko extends JPanel {
 
-    private Kayttoliittyma kayttis;
-    private Kysely kysely;
-    private HashMap kysymykset;
-    private Vastaaja vastaaja;
-    private VastausKentta[] kysymysKomponentit;
+    private final Kayttoliittyma kayttis;
+    private final Kysely kysely;
+    private final HashMap kysymykset;
+    private final Vastaaja vastaaja;
+    private final VastausKentta[] kysymysKomponentit;
 
     public KyselyValikko(Kayttoliittyma kayttis, Vastaaja vastaaja, Kysely kysely) {
         super(new GridLayout(kysely.getKoko() + 2, 2, 10, 10));

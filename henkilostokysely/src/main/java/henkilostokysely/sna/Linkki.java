@@ -8,9 +8,9 @@ package henkilostokysely.sna;
  */
 public class Linkki {
     
-    private double kapasiteetti;
-    private double paino;
-    private int id;
+    private final double kapasiteetti;
+    private final double paino;
+    private final int id;
     
     /**
      * En vielä tiedä onko painosta ja kapasiteetista mitään hyötyä, 

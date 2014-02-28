@@ -9,8 +9,6 @@ import henkilostokysely.gui.Kayttoliittyma;
 import henkilostokysely.gui.Valikko;
 import henkilostokysely.vastausanalyysi.NumeerinenAineisto;
 import henkilostokysely.vastausanalyysi.NumeeristenVastaustenPurkaja;
-import java.awt.FlowLayout;
-import java.awt.GridLayout;
 import java.util.ArrayList;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
@@ -25,8 +23,8 @@ import javax.swing.JTable;
  */
 public class TilastoValikko extends JPanel {
 
-    private Kayttoliittyma kayttis;
-    private Kysymys valittuKysymys;
+    private final Kayttoliittyma kayttis;
+    private final Kysymys valittuKysymys;
 
     public TilastoValikko(Kayttoliittyma kayttis, Kysymys valittuKysymys) {
         super();

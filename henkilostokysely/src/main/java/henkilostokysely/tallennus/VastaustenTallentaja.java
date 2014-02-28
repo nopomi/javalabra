@@ -46,6 +46,7 @@ public class VastaustenTallentaja {
      * Metodi kirjoittaa tiedostoon ja käsittelee mahdolliset virheet.
      * Kirjoittaja kirjoittaa eri riveille ja erittelee vastaukset siten
      * että sen muoto on "VASTAAJAID, VASTAUS".
+     * @param kysely
      * @param vastaaja
      * @param vastaus
      */

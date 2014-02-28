@@ -19,17 +19,18 @@ import javax.swing.*;
  */
 public class NimiValikkoKuuntelija implements ActionListener {
 
-    private NimiValikko valikko;
-    private JButton tallennuspainike;
-    private JTextField tekstikentta;
-    private JLabel syoteKehotus;
-    private Kyselysailio sailio;
+    private final NimiValikko valikko;
+    private final JButton tallennuspainike;
+    private final JTextField tekstikentta;
+    private final JLabel syoteKehotus;
+    private final Kyselysailio sailio;
 
     /**
      *
      * @param valikko
      * @param tekstikentta
      * @param tallennuspainike
+     * @param syoteLabel
      * @param sailio
      */
     public NimiValikkoKuuntelija(NimiValikko valikko, JTextField tekstikentta,

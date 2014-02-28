@@ -10,7 +10,7 @@ import javax.swing.*;
  */
 public class Aloitusvalikko extends JPanel {
 
-    private Kayttoliittyma kayttoliittyma;
+    private final Kayttoliittyma kayttoliittyma;
 
     /**
      *

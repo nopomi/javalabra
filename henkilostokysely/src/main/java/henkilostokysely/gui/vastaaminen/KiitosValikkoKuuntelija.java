@@ -15,7 +15,7 @@ import javax.swing.JButton;
  */
 public class KiitosValikkoKuuntelija implements ActionListener {
 
-    private KiitosValikko valikko;
+    private final KiitosValikko valikko;
     private final JButton takaisinValikkoonPainike;
 
     public KiitosValikkoKuuntelija(KiitosValikko valikko, JButton painike) {

@@ -18,7 +18,7 @@ import javax.swing.JTextField;
  */
 public class TietoValikko extends JPanel {
 
-    private Kayttoliittyma kayttis;
+    private final Kayttoliittyma kayttis;
 
     public TietoValikko(Kayttoliittyma kayttis) {
         super(new GridLayout(3, 3, 10, 10));

@@ -18,7 +18,7 @@ import javax.swing.JTextField;
  */
 public class KolmiKentta extends JPanel implements VastausKentta{
     
-    private Kysymys kysymys;
+    private final Kysymys kysymys;
     private JTextField vastausKentta1;
     private JTextField vastausKentta2;
     private JTextField vastausKentta3;

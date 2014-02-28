@@ -1,15 +1,8 @@
 package henkilostokysely.gui.analysointi;
 
-import edu.uci.ics.jung.algorithms.layout.ISOMLayout;
-import edu.uci.ics.jung.graph.DirectedSparseMultigraph;
-import edu.uci.ics.jung.visualization.VisualizationImageServer;
 import henkilostokysely.domain.Kysymys;
 import henkilostokysely.gui.Kayttoliittyma;
 import henkilostokysely.gui.Valikko;
-import henkilostokysely.sna.Kaavio;
-import henkilostokysely.sna.Linkki;
-import henkilostokysely.sna.Noodi;
-import henkilostokysely.sna.SNATiedostonPurkaja;
 import henkilostokysely.vastausanalyysi.SanallistenVastaustenPurkaja;
 import java.awt.Dimension;
 import java.awt.FlowLayout;

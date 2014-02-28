@@ -11,10 +11,10 @@ import javax.swing.*;
  */
 public class AloitusvalikkoKuuntelija implements ActionListener {
 
-    private Aloitusvalikko valikko;
-    private JButton vastaa;
-    private JButton analysoi;
-    private JButton luo;
+    private final Aloitusvalikko valikko;
+    private final JButton vastaa;
+    private final JButton analysoi;
+    private final JButton luo;
 
     /**
      * Painikkeet parametrina ottava konstruktori, myös aloitusvalikko tulee

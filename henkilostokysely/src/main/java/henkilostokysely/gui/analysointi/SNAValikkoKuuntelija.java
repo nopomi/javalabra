@@ -15,8 +15,8 @@ import javax.swing.JButton;
  */
 public class SNAValikkoKuuntelija implements ActionListener{
     
-    private SNAValikko valikko;
-    private JButton takaisinPainike;
+    private final SNAValikko valikko;
+    private final JButton takaisinPainike;
     
     public SNAValikkoKuuntelija(SNAValikko valikko, JButton takaisinPainike){
         this.valikko=valikko;

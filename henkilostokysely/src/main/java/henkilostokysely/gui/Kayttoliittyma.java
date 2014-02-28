@@ -18,9 +18,9 @@ import javax.swing.*;
 public class Kayttoliittyma implements Runnable {
 
     private JFrame frame;
-    private HashMap<Valikko, JPanel> valikot;
+    private final HashMap<Valikko, JPanel> valikot;
     private JPanel aktiivinen;
-    private Kyselysailio sailio;
+    private final Kyselysailio sailio;
 
     /**
      * Saa parametrina kyselysäiliön, johon kyselyt talletetaan

@@ -19,7 +19,7 @@ import javax.swing.JTextField;
  */
 public class TunnistusValikko extends JPanel{
     
-    private Kayttoliittyma kayttis;
+    private final Kayttoliittyma kayttis;
     
     public TunnistusValikko(Kayttoliittyma kayttis) {
         super(new GridLayout(3, 3, 10, 10));

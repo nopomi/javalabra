@@ -10,7 +10,7 @@ package henkilostokysely.sna;
  */
 public class Noodi {
     
-    private int id;
+    private final int id;
     
     /**
      * Metodi luo uuden Noodin annetulla id:llä.
