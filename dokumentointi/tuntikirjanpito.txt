@@ -20,6 +20,11 @@ Tuntikirjanpito:
 17.2. 12:30-17:30 (5h) Käyttöliittymäohjelmointi, luontiosuus ja vastausosuus
 18.2. 09:40-14:40 (5h) Käyttöliittymäohjelmointi, vastausosuus
 19.2. 16:00-17:30 (1h30min) Käyttöliittymäohjelmointi, analysointiosuus
+23.2. 14:00-15:00 (1h) viimeisen viikon suunnittelu ja työn lopullisen valmistumisen aikataulutus
+24.2. 12:00-17:00 (5h) Käyttöliittymän analysointiosuuden ohjelmointi ja sovelluslogiikan kehittäminen sopivampaan muotoon. Uudet tiedostolukijat
+25.2. 18:00-20:00 (2h) Käyttöliittymän syötteiden tarkistuksen suunnittelu ja ohjelmoinnin aloitus
+26.2. 10:00-14:00 (4h) Syötteiden tarkistuksen ohjelmointi ja käyttöliittymän pienemmät korjaukset
+28.2. 11:00-14:30 (3h30min) Tallennusrakenteen pienet muutokset ja testaukset koulun koneella. Jar-tiedoston luominen ja testien laajentaminen tarvittavaan muotoon.
 
 
 
